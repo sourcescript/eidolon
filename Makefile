@@ -1,29 +1,30 @@
+NPM = ./node_modules/.bin/
+WEBPACK = $(NPM)webpack
+WEBPACK_OPT = -d --display-error-details
+STYLUS = $(NPM)stylus
+STYLUS_OPT = -m --include-css --include ./styles/ \
+	--use ./stylus.js < ./styles/main.styl > ./dist/style.css
+
 # Builds the scripts
 build:
-	@echo "Building file.. Please use `make prod` in production"
-	webpack -d --display-error-details
-
-# Watches for files changes, and runs `build`
-watch:
-	webpack -w -d --display-error-details
-
-# Builds the scripts for production (uglification)
-prod:
-	webpack -p -d --display-error-details
-
-# Installs dependencies
-install:
-	npm install -g bower webpack
-	npm install
-	bower install
+	$(WEBPACK) -p $(WEBPACK_OPT)
 
 # Build stylus
 style:
-	./node_modules/.bin/stylus -m --include-css --include ./styles/ \
-		--use ./stylus.js < ./styles/main.styl > ./dist/style.css
+	$(STYLUS) $(STYLUS_OPT)
+
+# Watches for files changes, and runs `build`
+watch:
+	$(WEBPACK) -w $(WEBPACK_OPT) | $(STYLIS) -w $(STYLUS_OPT)
+
+# Installs dependencies
+install:
+	npm install bower -g
+	npm install
+	bower install
 
 # Run tests
 test:
 	npm test
 
-.PHONY: build
+.PHONY: build style
