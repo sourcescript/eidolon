@@ -20,7 +20,6 @@
     "react": "^0.13.1"
   },
   "devDependencies": {
-    "less": "^2.4.0",
     "stylus": "^0.50.0",
     "webpack": "^1.7.3"
   }
