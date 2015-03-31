@@ -17,6 +17,11 @@ install:
 	npm install
 	bower install
 
+# Build stylus
+style:
+	./node_modules/.bin/stylus -m --include-css --include ./styles/ \
+		--use ./stylus.js < ./styles/main.styl > ./dist/style.css
+
 # Run tests
 test:
 	npm test
