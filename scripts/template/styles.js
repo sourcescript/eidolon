@@ -8,15 +8,16 @@ var floor = Math.floor;
  */
 var _ = {};
 
-_['color-primary']  = '#4AB1D1';
+_['color-primary']  = '#399bff';
 _['color-success']  = '#4AD1A3';
 _['color-warning']  = '#E5E851';
 _['color-danger']   = '#F24A53';
-_['color-blocked']  = '#4D5159';
+_['color-blocked']  = '#3d464d';
 _['color-grey']     = 'rgba(255, 255, 255, 0.7)';
 
 _['color-base']       = '#fff';
-_['color-base-highlight']  = '#F24A53';
+_['color-base-sub']  = _['color-blocked'];
+_['color-base-highlight']  = _['color-primary'];
 // Percentage for use in stylus when darkening colors
 // e.g., darken(color-base, color--dk)
 // e.g., darken(color-primary, color--dk)
@@ -41,7 +42,8 @@ _['font-size-h5'] = _['font-size-base'];
 _['font-size-h6'] = _['font-size-small'];
 // _['font-size-h6'] = ceil(_['font-size-base'] * 0.85); // ~12px
 
-_['base-line-height'] = 1.428571429; // 20/14
+_['line-height-base'] = 1.428571429; // <= 20/14
+_['line-height-computed'] = floor(_['font-size-base'] * _['line-height-base']); // ~20
 _['border-radius-base'] = 3;
 
 /**
@@ -54,14 +56,14 @@ _['height-base'] = 50;
 _['height-base-lg'] = _['height-base'] * 2;
 _['height-base-sm'] = _['height-base'] / 2;
 
-_['padding-base-vt'] = 6;
+_['padding-base-vt'] = (_['height-base'] - _['line-height-computed']) / 2;
 _['padding-base-hr'] = _['padding-base-vt'] * 2;
 
 /**
  * Stuff
  */
-_['sidebar_width'] = 250;
-_['sidebar_bg'] = _['color-base-highlight'];
-_['topbar_height'] = _['height-base'];
+_['sidebar-width'] = 250;
+_['sidebar-bg'] = _['color-base-sub'];
+_['topbar-height'] = _['height-base'];
 
 module.exports = _;

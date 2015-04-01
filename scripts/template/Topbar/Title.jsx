@@ -2,15 +2,14 @@ import React from 'react';
 import _base from '../styles';
 
 export default React.createClass({
-  render: function() {
+  render() {
     var { children, ...other } = this.props;
-
     var style = {
-      position: 'fixed',
-      marginLeft: _base['sidebar_width'],
-      height: 50,
-      width: '100%',
-      background: _base['color-base']
+      float: 'left',
+      padding: _base['padding-base-vt'],
+      height: _base['topbar-height'],
+      width: _base['sidebar-width'],
+      background: _base['color-base-highlight']
     };
 
     return (

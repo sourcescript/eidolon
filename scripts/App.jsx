@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Sidebar from './template/Sidebar/index';
-import Topbar from './template/Topbar/Topbar';
+import Topbar from './template/Topbar/index';
 import Content from './template/Content/index';
 
 var App = React.createClass({
@@ -10,15 +10,18 @@ var App = React.createClass({
       <div>
         <Sidebar.Outer>
           <Sidebar.List>
-            <Sidebar.Item active={true}> Admin Panel </Sidebar.Item>
-            <Sidebar.Item active={true}> <Sidebar.Link href=".."> Hello </Sidebar.Link> </Sidebar.Item>
+            <Sidebar.Item> Admin Panel </Sidebar.Item>
+            <Sidebar.Item> <Sidebar.Link href=".."> Hello </Sidebar.Link> </Sidebar.Item>
             <Sidebar.Item active={true}> <Sidebar.Link href=".."> Hello </Sidebar.Link> </Sidebar.Item>
           </Sidebar.List>
         </Sidebar.Outer>
 
-        <Topbar>
-          In Here
-        </Topbar>
+        <Topbar.Outer>
+          <Topbar.Title> In Here </Topbar.Title>
+          <Topbar.Inner>
+            HEY
+          </Topbar.Inner>
+        </Topbar.Outer>
 
         <Content.Outer>
           <Content.Inner>

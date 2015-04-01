@@ -6,8 +6,8 @@ export default React.createClass({
     var { children, ...other } = this.props;
 
     var style = {
-      paddingTop: _base['topbar_height'],
-      marginLeft: _base['sidebar_width'],
+      paddingTop: _base['topbar-height'],
+      marginLeft: _base['sidebar-width'],
       background: '#ddd',
       minHeight: '100vh'
     };

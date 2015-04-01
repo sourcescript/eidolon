@@ -6,7 +6,7 @@ export default React.createClass({
     /**
      * Used for the active styling
      */
-    active: React.PropTypes.boolean
+    active: React.PropTypes.bool
   },
 
   /**
@@ -20,9 +20,11 @@ export default React.createClass({
     var { children, active, ...other } = this.props;
 
     var style = {
-      background: `rgba(0, 0, 0, ${active ? 0.5 : 0})`,
+      padding: _base['padding-base-vt'],
+      background: `rgba(0, 0, 0, ${active ? 0.2 : 0})`,
       height: _base['height-base'],
-      listStyle: 'none'
+      listStyle: 'none',
+      color: '#fff'
     };
 
     return (
