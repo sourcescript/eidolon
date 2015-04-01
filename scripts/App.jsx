@@ -27,6 +27,9 @@ var App = React.createClass({
         <Content.Outer>
           <Content.Inner>
             <Form.Input />
+            <Form.TextArea />
+            <Form.Radio />
+            <Form.Checkbox />
           </Content.Inner>
         </Content.Outer>
       </div>
