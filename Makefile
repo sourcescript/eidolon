@@ -1,3 +1,4 @@
+SHELL=C:/Windows/System32/cmd.exe
 NPM = ./node_modules/.bin/
 WEBPACK = $(NPM)webpack
 WEBPACK_OPT = -d --display-error-details

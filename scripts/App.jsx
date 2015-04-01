@@ -3,6 +3,7 @@ import React from 'react';
 import Sidebar from './template/Sidebar/index';
 import Topbar from './template/Topbar/Topbar';
 import Content from './template/Content/index';
+import Form from './template/Form/index';
 
 var App = React.createClass({
   render() {
@@ -22,7 +23,7 @@ var App = React.createClass({
 
         <Content.Outer>
           <Content.Inner>
-            Heyaa
+            <Form.Input />
           </Content.Inner>
         </Content.Outer>
       </div>
