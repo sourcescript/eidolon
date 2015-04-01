@@ -6,17 +6,16 @@ export default React.createClass({
     var { children, ...other } = this.props;
 
     var style = {
-      position: 'fixed',
+      paddingTop: _base['topbar_height'],
       marginLeft: _base['sidebar_width'],
-      height: 50,
-      width: '100%',
-      background: _base['color-base']
+      background: '#ddd',
+      minHeight: '100vh'
     };
 
     return (
       <div style={style} {...other}>
         {children}
       </div>
-    );
+    )
   }
 });

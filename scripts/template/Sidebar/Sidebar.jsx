@@ -7,16 +7,13 @@ export default React.createClass({
 
     var style = {
       position: 'fixed',
-      marginLeft: _base['sidebar_width'],
-      height: 50,
-      width: '100%',
-      background: _base['color-base']
+      width: _base['sidebar_width'],
     };
 
     return (
       <div style={style} {...other}>
         {children}
       </div>
-    );
+    )
   }
-});
+})

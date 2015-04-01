@@ -2,8 +2,7 @@ NPM = ./node_modules/.bin/
 WEBPACK = $(NPM)webpack
 WEBPACK_OPT = -d --display-error-details
 STYLUS = $(NPM)stylus
-STYLUS_OPT = -m --include-css --include ./styles/ \
-	--use ./stylus.js < ./styles/main.styl > ./dist/style.css
+STYLUS_OPT = -m --include-css --include ./styles/ --use ./stylus.js < ./styles/main.styl > ./dist/style.css
 
 # Builds the scripts
 build:
@@ -15,7 +14,7 @@ style:
 
 # Watches for files changes, and runs `build`
 watch:
-	$(WEBPACK) -w $(WEBPACK_OPT) | $(STYLIS) -w $(STYLUS_OPT)
+	$(WEBPACK) -w $(WEBPACK_OPT) || $(STYLUS) -w $(STYLUS_OPT)
 
 # Installs dependencies
 install:
