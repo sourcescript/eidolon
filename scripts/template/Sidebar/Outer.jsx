@@ -2,7 +2,7 @@ import React from 'react';
 import _base from '../styles';
 
 export default React.createClass({
-  render: function() {
+  render() {
     var { children, ...other } = this.props;
 
     var style = {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Sidebar from './template/Sidebar/Sidebar';
+import Sidebar from './template/Sidebar/index';
 import Topbar from './template/Topbar/Topbar';
 import Content from './template/Content/index';
 
@@ -8,9 +8,13 @@ var App = React.createClass({
   render() {
     return (
       <div>
-        <Sidebar>
-          Something Here
-        </Sidebar>
+        <Sidebar.Outer>
+          <Sidebar.List>
+            <Sidebar.Item active={true}> Admin Panel </Sidebar.Item>
+            <Sidebar.Item active={true}> <Sidebar.Link href=".."> Hello </Sidebar.Link> </Sidebar.Item>
+            <Sidebar.Item active={true}> <Sidebar.Link href=".."> Hello </Sidebar.Link> </Sidebar.Item>
+          </Sidebar.List>
+        </Sidebar.Outer>
 
         <Topbar>
           In Here

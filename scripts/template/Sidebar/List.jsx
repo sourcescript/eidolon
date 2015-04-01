@@ -3,13 +3,12 @@ import React from 'react';
 export default React.createClass({
   render() {
     var { children, ...other } = this.props;
-
-    var style = { padding: 20 };
+    var style = { paddingLeft: 0 };
 
     return (
-      <div style={style} {...other}>
+      <ul style={style} {...other}>
         {children}
-      </div>
-    )
+      </ul>
+    );
   }
 });

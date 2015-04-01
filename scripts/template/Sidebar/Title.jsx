@@ -1,15 +1,11 @@
 import React from 'react';
+import Item from './Item';
 
 export default React.createClass({
   render() {
     var { children, ...other } = this.props;
+    var style = {};
 
-    var style = { padding: 20 };
-
-    return (
-      <div style={style} {...other}>
-        {children}
-      </div>
-    )
+    return <Item style={style} />;
   }
-});
+})

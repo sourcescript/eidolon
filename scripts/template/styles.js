@@ -50,10 +50,18 @@ _['border-radius-base'] = 3;
 _['screen-xs'] = 480;
 _['screen-sm'] = 768;
 
+_['height-base'] = 50;
+_['height-base-lg'] = _['height-base'] * 2;
+_['height-base-sm'] = _['height-base'] / 2;
+
+_['padding-base-vt'] = 6;
+_['padding-base-hr'] = _['padding-base-vt'] * 2;
+
 /**
  * Stuff
  */
 _['sidebar_width'] = 250;
-_['topbar_height'] = 50;
+_['sidebar_bg'] = _['color-base-highlight'];
+_['topbar_height'] = _['height-base'];
 
 module.exports = _;
