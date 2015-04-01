@@ -1,11 +1,18 @@
-var React = require('react');
-var Sidebar = require('./components/Sidebar');
-var Topbar = require('./components/Topbar');
+import React from 'react';
+import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
 
 var App = React.createClass({
   render() {
     return (
       <div>
+        <Sidebar>
+          Something
+        </Sidebar>
+
+        <Topbar>
+          In Here
+        </Topbar>
       </div>
     );
   }
