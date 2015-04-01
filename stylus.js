@@ -1,4 +1,4 @@
-var variables = require('./scripts/core/config/styles');
+var variables = require('./scripts/template/styles');
 
 /**
  * Exposes our motherfucking variables to stylus
