@@ -1,4 +1,10 @@
-SHELL=C:/Windows/System32/cmd.exe
+# For some windows shit, I don't know why.
+# Anyway, @maebe / Brian committed this ../..
+SYSTEM_32 = C:/Windows/System32
+if [ -d $(SYSTEM_32) ]; then \
+	SHELL = $(SYSTEM_32)/cmd.exe \
+fi
+
 NPM = ./node_modules/.bin/
 WEBPACK = $(NPM)webpack
 WEBPACK_OPT = -d --display-error-details
