@@ -1,11 +1,15 @@
 BUILD_PATH = ./dist
-NPM = ./node_modules/.bin
+FONT_EXT = {woff2,ttf,otf,woff,eot,svg}
+FONT_PATH = $(BUILD_PATH)/fonts
+NPM_PATH = ./node_modules/.bin
 BOWER_PATH = ./bower_components
-WEBPACK = $(NPM)/webpack
+#
+WEBPACK = $(NPM_PATH)/webpack
 WEBPACK_OPT = -d --display-error-details
-STYLUS = $(NPM)/stylus
+#
+STYLUS = $(NPM_PATH)/stylus
 STYLUS_PATH = ./styles
-STYLUS_OPT = -m --include-css --include ./styles/ --use ./stylus.js < ./styles/main.styl > ./dist/style.css
+STYLUS_OPT = -m --include-css --include ./styles/ --use ./stylus.js < ./styles/main.styl > ./dist/css/style.css
 
 # Builds the scripts
 build:
@@ -19,10 +23,13 @@ style:
 	$(STYLUS) $(STYLUS_OPT)
 	mkdir -p $(BUILD_PATH)
 
-	# copy typicons
-	cp $(BOWER_PATH)/typicons/src/font/*.{ttf,woff,eot,svg} $(BUILD_PATH)
+	# copy font-awesome
+	cp $(BOWER_PATH)/font-awesome/fonts/*.$(FONT_EXT) $(FONT_PATH)
 	# copy google fonts
-	cp $(STYLUS_PATH)/vendor/*/*.woff2 $(BUILD_PATH)
+	# we're not using $(FONT_EXT) since using the brace notation
+	# (e.g., {woff2,woff,ttf}) throws an error when none of the
+	# specified extension exists
+	cp $(STYLUS_PATH)/vendor/*/*.woff2 $(FONT_PATH)
 
 # Watches for files changes, and runs `build`
 watch:
@@ -30,12 +37,12 @@ watch:
 
 # Installs dependencies
 install:
-	npm install bower -g
+	npm install webpack babel bower -g
 	npm install
 	bower install
 
 # Run tests
 test:
-	npm test
+	NPM_PATH test
 
 .PHONY: build style

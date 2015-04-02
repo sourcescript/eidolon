@@ -1,14 +1,13 @@
 import React from 'react';
-import _base from '../styles';
-import Item from './Item';
+import _base from '../../styles';
+import Outer from './Outer';
 
 export default React.createClass({
   render() {
     var { children, ...other } = this.props;
 
     var style = {
-      paddingTop: 0,
-      paddingBottom: _base['padding-base-vt'] / 2,
+      padding: `0 ${_base['padding-base-vt']}px ${_base['padding-base-vt'] / 2}px`,
       letterSpacing: 0.4,
       // We'll remove the set fixed height in <Item>
       // since we want our title item to create a
@@ -18,6 +17,6 @@ export default React.createClass({
       fontSize: 10
     };
 
-    return <Item style={style} className="u-text -up"> {children} </Item>;
+    return <Outer style={style} className="u-text -up"> {children} </Outer>;
   }
 })

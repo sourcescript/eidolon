@@ -1,5 +1,5 @@
 import React from 'react';
-import _base from '../styles';
+import _base from '../../styles';
 
 export default React.createClass({
   render() {
@@ -7,6 +7,8 @@ export default React.createClass({
 
     var style = {
       display: 'block',
+      height: _base['height-base'],
+      padding: _base['padding-base-vt'],
       width: '100%',
       color: _base['sidebar-color'],
       textDecoration: 'none'

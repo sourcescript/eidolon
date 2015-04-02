@@ -12,7 +12,7 @@ var _ = {};
  * Directories
  */
 _['dist'] = '/dist/';
-_['fonts'] = _['dist'];
+_['fonts'] = _['dist'] + 'fonts/';
 _['bower'] = '/../bower_components/';
 
 /**

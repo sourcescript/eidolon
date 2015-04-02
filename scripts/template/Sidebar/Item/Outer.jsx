@@ -1,5 +1,5 @@
 import React from 'react';
-import _base from '../styles';
+import _base from '../../styles';
 
 export default React.createClass({
   propTypes: {
@@ -20,7 +20,6 @@ export default React.createClass({
     var { style, children, active, ...other } = this.props;
 
     var style = Object.assign({
-      padding: _base['padding-base-vt'],
       background: `rgba(0, 0, 0, ${active ? 0.2 : 0})`,
       height: _base['height-base'],
       listStyle: 'none',

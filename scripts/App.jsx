@@ -12,9 +12,14 @@ var App = React.createClass({
       <div>
         <Sidebar.Outer>
           <Sidebar.List>
-            <Sidebar.Title> Admin Panel </Sidebar.Title>
-            <Sidebar.Item> <Sidebar.Link href=".."> Home </Sidebar.Link> </Sidebar.Item>
-            <Sidebar.Item active={true}> <Sidebar.Link href=".."> Manage Account </Sidebar.Link> </Sidebar.Item>
+            <Sidebar.Item.Title> Admin Panel </Sidebar.Item.Title>
+            <Sidebar.Item.Outer>
+              <Sidebar.Item.Link href="..">
+                <Sidebar.Item.Icon><i className="fa fa-home" /></Sidebar.Item.Icon>
+                Home
+              </Sidebar.Item.Link>
+            </Sidebar.Item.Outer>
+            <Sidebar.Item.Outer active={true}> <Sidebar.Item.Link href=".."> Manage Account </Sidebar.Item.Link> </Sidebar.Item.Outer>
           </Sidebar.List>
         </Sidebar.Outer>
 

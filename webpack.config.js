@@ -4,7 +4,7 @@ module.exports = {
   entry: './scripts/App.jsx',
   output: {
     filename: 'script.js', // Filename of the output,
-    path: './dist' // Path of the output
+    path: './dist/js' // Path of the output
   },
   module: {
     // Transformers
