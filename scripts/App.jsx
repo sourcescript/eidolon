@@ -43,7 +43,7 @@ var App = React.createClass({
           </Sidebar.List>
 
           <Sidebar.List>
-            <Sidebar.Item.Title> Main </Sidebar.Item.Title>
+            <Sidebar.Item.Title> More </Sidebar.Item.Title>
             <Sidebar.Item.Outer active={false}>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-map-marker" /></Sidebar.Item.Icon>
