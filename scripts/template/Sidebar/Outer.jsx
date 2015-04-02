@@ -10,7 +10,8 @@ export default React.createClass({
       overflow: 'scroll',
       position: 'fixed',
       paddingTop: _base['topbar-height'],
-      width: _base['sidebar-width']
+      width: _base['sidebar-width'],
+      fontFamily: _base['headings-font-family']
     };
 
     return (

@@ -9,7 +9,8 @@ export default React.createClass({
       position: 'fixed',
       height: 50,
       width: '100%',
-      background: _base['color-base-highlight']
+      background: _base['color-base-highlight'],
+      color: _base['topbar-color']
     };
 
     return (

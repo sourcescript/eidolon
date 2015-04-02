@@ -1,4 +1,5 @@
 import React from 'react';
+import _base from '../styles';
 
 export default React.createClass({
   render() {
@@ -7,7 +8,7 @@ export default React.createClass({
     var style = {
       display: 'block',
       width: '100%',
-      color: '#fff',
+      color: _base['sidebar-color'],
       textDecoration: 'none'
     };
 

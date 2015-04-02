@@ -1,5 +1,6 @@
-import React from 'react';
+require("babel/polyfill");
 
+import React from 'react';
 import Sidebar from './template/Sidebar/index';
 import Topbar from './template/Topbar/index';
 import Content from './template/Content/index';
@@ -11,9 +12,9 @@ var App = React.createClass({
       <div>
         <Sidebar.Outer>
           <Sidebar.List>
-            <Sidebar.Item> Admin Panel </Sidebar.Item>
-            <Sidebar.Item> <Sidebar.Link href=".."> Hello </Sidebar.Link> </Sidebar.Item>
-            <Sidebar.Item active={true}> <Sidebar.Link href=".."> Hello </Sidebar.Link> </Sidebar.Item>
+            <Sidebar.Title> Admin Panel </Sidebar.Title>
+            <Sidebar.Item> <Sidebar.Link href=".."> Home </Sidebar.Link> </Sidebar.Item>
+            <Sidebar.Item active={true}> <Sidebar.Link href=".."> Manage Account </Sidebar.Link> </Sidebar.Item>
           </Sidebar.List>
         </Sidebar.Outer>
 

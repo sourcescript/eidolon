@@ -17,18 +17,19 @@ export default React.createClass({
   },
 
   render() {
-    var { children, active, ...other } = this.props;
+    var { style, children, active, ...other } = this.props;
 
-    var style = {
+    var style = Object.assign({
       padding: _base['padding-base-vt'],
       background: `rgba(0, 0, 0, ${active ? 0.2 : 0})`,
       height: _base['height-base'],
       listStyle: 'none',
-      color: '#fff'
-    };
+      fontSize: _base['font-size-h6'],
+      color: _base['sidebar-color']
+    }, style);
 
     return (
-      <li style={style} {...other}>
+      <li style={style} className="u-text -truncate" {...other}>
         {children}
       </li>
     );

@@ -23,10 +23,14 @@ _['color-success']  = '#4AD1A3';
 _['color-warning']  = '#E5E851';
 _['color-danger']   = '#F24A53';
 _['color-blocked']  = '#3d464d';
-_['color-grey']     = 'rgba(255, 255, 255, 0.7)';
+_['color-grey']     = '#f2f2f2';
 
 _['color-base']       = '#fff';
 _['color-base-sub']  = _['color-blocked'];
+// The current `color-base-sub`(`color-blocked`) as background perfectly matches
+// `color-grey` as the color of the text on it
+// (or in other words, color of the overlay text).
+_['color-base-sub-overlay'] = _['color-grey'];
 _['color-base-highlight']  = _['color-primary'];
 // Percentage for use in stylus when darkening colors
 // e.g., darken(color-base, color--dk)
@@ -81,13 +85,15 @@ _['height-base-lg'] = _['height-base'] * 2;
 _['height-base-sm'] = _['height-base'] / 2;
 
 _['padding-base-vt'] = (_['height-base'] - _['line-height-computed']) / 2;
-_['padding-base-hr'] = _['padding-base-vt'] * 2;
+_['padding-base-hr'] = _['padding-base-vt'];
 
 /**
  * Stuff
  */
 _['sidebar-width'] = 250;
 _['sidebar-bg'] = _['color-base-sub'];
+_['sidebar-color'] = _['color-base-sub-overlay'];
+_['topbar-color'] = '#fff';
 _['topbar-height'] = _['height-base'];
 
 module.exports = _;
