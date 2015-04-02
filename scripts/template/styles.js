@@ -42,6 +42,9 @@ _['color--dk'] = '5%';
  */
 _['font-family-base'] = 'Open Sans';
 _['font-family-headings'] = 'Montserrat';
+_['montserrat-weight-normal'] = 400;
+_['montserrat-weight-bold'] = 700;
+
 _['font-size-base'] = 14
 _['font-size-large'] = ceil(_['font-size-base'] * 1.25); // ~18px
 _['font-size-small'] = ceil(_['font-size-base'] * 0.85); // ~12px
