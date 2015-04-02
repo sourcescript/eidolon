@@ -5,8 +5,9 @@ if [ -d $(SYSTEM_32) ]; then \
 	SHELL = $(SYSTEM_32)/cmd.exe \
 fi
 
-FONT_PATH = ./dist/fonts
+BUILD_PATH = ./dist
 NPM = ./node_modules/.bin
+BOWER_PATH = ./bower_components
 WEBPACK = $(NPM)/webpack
 WEBPACK_OPT = -d --display-error-details
 STYLUS = $(NPM)/stylus
@@ -23,8 +24,12 @@ build:
 # http://stackoverflow.com/questions/793858/how-to-mkdir-only-if-a-dir-does-not-already-exist
 style:
 	$(STYLUS) $(STYLUS_OPT)
-	mkdir -p $(FONT_PATH)
-	cp $(STYLUS_PATH)/vendor/*/*.woff2 $(FONT_PATH)
+	mkdir -p $(BUILD_PATH)
+
+	# copy typicons
+	cp $(BOWER_PATH)/typicons/src/font/*.{ttf,woff,eot,svg} $(BUILD_PATH)
+	# copy google fonts
+	cp $(STYLUS_PATH)/vendor/*/*.woff2 $(BUILD_PATH)
 
 # Watches for files changes, and runs `build`
 watch:
