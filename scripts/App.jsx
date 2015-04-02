@@ -12,11 +12,11 @@ var App = React.createClass({
       <div>
         <Sidebar.Outer>
           <Sidebar.List>
-            <Sidebar.Item.Title> Admin Panel </Sidebar.Item.Title>
+            <Sidebar.Item.Title> Main </Sidebar.Item.Title>
             <Sidebar.Item.Outer>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-home" /></Sidebar.Item.Icon>
-                Home
+                Dashboard
               </Sidebar.Item.Link>
             </Sidebar.Item.Outer>
 
@@ -34,6 +34,36 @@ var App = React.createClass({
               </Sidebar.Item.Link>
             </Sidebar.Item.Outer>
 
+            <Sidebar.Item.Outer active={false}>
+              <Sidebar.Item.Link href="..">
+                <Sidebar.Item.Icon><i className="fa fa-envelope-o" /></Sidebar.Item.Icon>
+                Messages
+              </Sidebar.Item.Link>
+            </Sidebar.Item.Outer>
+          </Sidebar.List>
+
+          <Sidebar.List>
+            <Sidebar.Item.Title> Main </Sidebar.Item.Title>
+            <Sidebar.Item.Outer active={false}>
+              <Sidebar.Item.Link href="..">
+                <Sidebar.Item.Icon><i className="fa fa-map-marker" /></Sidebar.Item.Icon>
+                Maps
+              </Sidebar.Item.Link>
+            </Sidebar.Item.Outer>
+
+            <Sidebar.Item.Outer active={false}>
+              <Sidebar.Item.Link href="..">
+                <Sidebar.Item.Icon><i className="fa fa-calendar-o" /></Sidebar.Item.Icon>
+                Calendar
+              </Sidebar.Item.Link>
+            </Sidebar.Item.Outer>
+
+            <Sidebar.Item.Outer active={false}>
+              <Sidebar.Item.Link href="..">
+                <Sidebar.Item.Icon><i className="fa fa-th" /></Sidebar.Item.Icon>
+                List
+              </Sidebar.Item.Link>
+            </Sidebar.Item.Outer>
           </Sidebar.List>
         </Sidebar.Outer>
 
