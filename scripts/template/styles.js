@@ -8,6 +8,16 @@ var floor = Math.floor;
  */
 var _ = {};
 
+/**
+ * Directories
+ */
+_['dist'] = '/dist/';
+_['fonts'] = _['dist'] + 'fonts';
+_['bower'] = '/../bower_components/';
+
+/**
+ * Colors
+ */
 _['color-primary']  = '#399bff';
 _['color-success']  = '#4AD1A3';
 _['color-warning']  = '#E5E851';
