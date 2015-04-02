@@ -95,6 +95,13 @@ _['padding-base-vt'] = (_['height-base'] - _['line-height-computed']) / 2;
 _['padding-base-hr'] = _['padding-base-vt'];
 
 /**
+ * Transition settings
+ */
+_['transition-base'] = '0.2s';
+_['transition-base-short'] = _['transition-base'] / 1.5;
+_['transition-base-long'] = _['transition-base'] * 2;
+
+/**
  * Stuff
  */
 _['sidebar-width'] = 250;
