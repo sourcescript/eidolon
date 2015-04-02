@@ -40,10 +40,19 @@ _['color--dk'] = '5%';
 /**
  * Typography
  */
-_['font-family-base'] = 'Open Sans';
-_['font-family-headings'] = 'Montserrat';
+_['open-sans-weight-light'] = 300;
+_['open-sans-weight-normal'] = 400;
+_['open-sans-weight-semi'] = 600;
+_['open-sans-weight-bold'] = 700;
+_['open-sans-weight-extra'] = 800;
+_['font-family-base'] = '"Open Sans", sans-serif';
+_['font-weight-base'] = _['open-sans-weight-normal'];
+
 _['montserrat-weight-normal'] = 400;
 _['montserrat-weight-bold'] = 700;
+_['headings-font-family'] = '"Montserrat", sans-serif';
+_['headings-font-weight'] = _['montserrat-weight-normal'];
+_['headings-line-height'] = 1.1; // IDK y
 
 _['font-size-base'] = 14
 _['font-size-large'] = ceil(_['font-size-base'] * 1.25); // ~18px
