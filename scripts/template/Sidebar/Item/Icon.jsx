@@ -5,8 +5,10 @@ export default React.createClass({
   render() {
     var { children, ...other } = this.props;
     var style = {
-      paddingRight: _base['padding-base-hr'] / 1.5,
-      fontSize: _base['font-size-base']
+      position: 'absolute',
+      top: _base['sidebar-icon-width'] / 2,
+      left: _base['sidebar-icon-width'],
+      fontSize: 18
     };
 
     return (

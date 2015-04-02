@@ -17,20 +17,27 @@ _['bower'] = '/../bower_components/';
 
 /**
  * Colors
+ * dk - darker
+ * lt - lighter
  */
 _['color-primary']  = '#399bff';
 _['color-success']  = '#4AD1A3';
 _['color-warning']  = '#E5E851';
 _['color-danger']   = '#F24A53';
 _['color-blocked']  = '#3d464d';
-_['color-grey']     = '#f2f2f2';
+
+_['color-grey']     = 'rgba(255, 255, 255, 0.6)';
+_['color-grey--lt'] = '#f2f2f2';
 
 _['color-base']       = '#fff';
 _['color-base-sub']  = _['color-blocked'];
 // The current `color-base-sub`(`color-blocked`) as background perfectly matches
 // `color-grey` as the color of the text on it
 // (or in other words, color of the overlay text).
+// Right now, color-grey == color-base-sub-overlay
+// color-base-sub == color-blocked
 _['color-base-sub-overlay'] = _['color-grey'];
+_['color-base-sub-overlay-highlight'] = _['color-grey--lt'];
 _['color-base-highlight']  = _['color-primary'];
 // Percentage for use in stylus when darkening colors
 // e.g., darken(color-base, color--dk)
@@ -91,8 +98,16 @@ _['padding-base-hr'] = _['padding-base-vt'];
  * Stuff
  */
 _['sidebar-width'] = 250;
+// sidebar-bg == color-base-sub
+// sidebar-color == color-base-sub-overlay
+// This is done this way so there are little
+// complications for further changes ;)
 _['sidebar-bg'] = _['color-base-sub'];
+_['sidebar-active-bg'] = 'rgba(0, 0, 0, 0.2)';
 _['sidebar-color'] = _['color-base-sub-overlay'];
+_['sidebar-color-highlight'] = _['color-base-sub-overlay-highlight'];
+_['sidebar-icon-width'] = 20;
+
 _['topbar-color'] = '#fff';
 _['topbar-height'] = _['height-base'];
 

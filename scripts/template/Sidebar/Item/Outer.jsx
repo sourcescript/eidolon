@@ -1,7 +1,13 @@
 import React from 'react';
+import { StyleResolverMixin, BrowserStateMixin } from 'radium';
 import _base from '../../styles';
 
 export default React.createClass({
+  // Used mainly to put the `active` styling
+  // on hover or if the `active` prop
+  // is set to true
+  mixins: [StyleResolverMixin, BrowserStateMixin],
+
   propTypes: {
     /**
      * Used for the active styling
@@ -19,16 +25,23 @@ export default React.createClass({
   render() {
     var { style, children, active, ...other } = this.props;
 
-    var style = Object.assign({
-      background: `rgba(0, 0, 0, ${active ? 0.2 : 0})`,
+    var style = this.buildStyles(Object.assign({
       height: _base['height-base'],
       listStyle: 'none',
       fontSize: _base['font-size-h6'],
-      color: _base['sidebar-color']
-    }, style);
+      // Apply the `active` styling accordingly
+      background: active ? _base['sidebar-active-bg'] : 'transparent',
+      color: active ? _base['sidebar-color-highlight'] : _base['sidebar-color'],
+
+      // Apply the `active` styling on hover
+      states: [{ hover: {
+        background: _base['sidebar-active-bg'],
+        color: _base['sidebar-color-highlight']
+      } }]
+    }, style));
 
     return (
-      <li style={style} className="u-text -truncate" {...other}>
+      <li style={style} className="u-text -truncate" {...other} {...this.getBrowserStateEvents()}>
         {children}
       </li>
     );

@@ -19,7 +19,21 @@ var App = React.createClass({
                 Home
               </Sidebar.Item.Link>
             </Sidebar.Item.Outer>
-            <Sidebar.Item.Outer active={true}> <Sidebar.Item.Link href=".."> Manage Account </Sidebar.Item.Link> </Sidebar.Item.Outer>
+
+            <Sidebar.Item.Outer active={false}>
+              <Sidebar.Item.Link href="..">
+                <Sidebar.Item.Icon><i className="fa fa-cog" /></Sidebar.Item.Icon>
+                Manage Account
+              </Sidebar.Item.Link>
+            </Sidebar.Item.Outer>
+
+            <Sidebar.Item.Outer active={true}>
+              <Sidebar.Item.Link href="..">
+                <Sidebar.Item.Icon><i className="fa fa-users" /></Sidebar.Item.Icon>
+                Manage Users
+              </Sidebar.Item.Link>
+            </Sidebar.Item.Outer>
+
           </Sidebar.List>
         </Sidebar.Outer>
 
