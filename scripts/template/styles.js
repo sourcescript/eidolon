@@ -40,6 +40,8 @@ _['color--dk'] = '5%';
 /**
  * Typography
  */
+_['font-family-base'] = 'Open Sans';
+_['font-family-headings'] = 'Montserrat';
 _['font-size-base'] = 14
 _['font-size-large'] = ceil(_['font-size-base'] * 1.25); // ~18px
 _['font-size-small'] = ceil(_['font-size-base'] * 0.85); // ~12px
