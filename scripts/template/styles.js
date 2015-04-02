@@ -8,6 +8,16 @@ var floor = Math.floor;
  */
 var _ = {};
 
+/**
+ * Directories
+ */
+_['dist'] = '/dist/';
+_['fonts'] = _['dist'];
+_['bower'] = '/../bower_components/';
+
+/**
+ * Colors
+ */
 _['color-primary']  = '#399bff';
 _['color-success']  = '#4AD1A3';
 _['color-warning']  = '#E5E851';
@@ -30,6 +40,20 @@ _['color--dk'] = '5%';
 /**
  * Typography
  */
+_['open-sans-weight-light'] = 300;
+_['open-sans-weight-normal'] = 400;
+_['open-sans-weight-semi'] = 600;
+_['open-sans-weight-bold'] = 700;
+_['open-sans-weight-extra'] = 800;
+_['font-family-base'] = '"Open Sans", sans-serif';
+_['font-weight-base'] = _['open-sans-weight-normal'];
+
+_['montserrat-weight-normal'] = 400;
+_['montserrat-weight-bold'] = 700;
+_['headings-font-family'] = '"Montserrat", sans-serif';
+_['headings-font-weight'] = _['montserrat-weight-normal'];
+_['headings-line-height'] = 1.1; // IDK y
+
 _['font-size-base'] = 14
 _['font-size-large'] = ceil(_['font-size-base'] * 1.25); // ~18px
 _['font-size-small'] = ceil(_['font-size-base'] * 0.85); // ~12px
