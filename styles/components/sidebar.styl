@@ -10,11 +10,11 @@
   & > ul > li.separator
     // Since we are using `border`, we'll avoid `padding` and use margins instead.
     padding 0
-    margin unit(base-padding-vt, px) unit(base-padding-hr, px) unit(base-padding-vt * 2, px) unit(base-padding-hr, px)
+    margin unit(padding-base-vt, px) unit(padding-base-hr, px) unit(padding-base-vt * 2, px) unit(padding-base-hr, px)
     border-bottom '1px solid rgba(0, 0, 0, 0.2)'
 
   & > ul > li.title
-    padding unit(base-padding-vt, px) unit(base-padding-hr / 2, px)
+    padding unit(padding-base-vt, px) unit(padding-base-hr / 2, px)
     letter-spacing base-letter-spacing
     font-size 10
 
@@ -39,7 +39,7 @@
     // that will be given a position of `absolute` for flexibility purposes
     position relative
     display block
-    padding unit(base-padding-vt, px) unit(base-padding-hr, px) unit(base-padding-vt * 2, px) unit(base-padding-hr, px)
+    padding unit(padding-base-vt, px) unit(padding-base-hr, px) unit(padding-base-vt * 2, px) unit(padding-base-hr, px)
     height height-base
     width 100%
     color #f2f2f2
