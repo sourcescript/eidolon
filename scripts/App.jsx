@@ -70,7 +70,9 @@ var App = React.createClass({
         </Sidebar.Outer>
 
         <Topbar.Outer>
-          <Topbar.Title> In Here </Topbar.Title>
+          <Topbar.Title style={{ textAlign: 'center' }}>
+            <h4 style={{ marginTop: 0, color: '#fff' }}> Eidolon </h4>
+          </Topbar.Title>
           <Topbar.Inner>
             HEY
           </Topbar.Inner>
@@ -149,12 +151,37 @@ var App = React.createClass({
               <hr />
 
               <h6 className="title"> Input </h6>
-              <div><Form.Input /></div>
-              <div><Form.TextArea /></div>
-              <div><Form.Radio /></div>
+              <div className="form-group"><input type="text" className="form-control" /></div>
+              <div className="form-group"><textarea className="form-control" /></div>
+              <div className="form-group"><input type="radio" /></div>
+              <div className="form-group">
+                <label> Username </label>
+                <p className="form-control-static"> Oh, hey! </p>
+              </div>
               <div><Form.Checkbox /></div>
 
               <h6 className="title"> Tables </h6>
+
+              <table className="table -striped -hover">
+                <thead>
+                  <tr>
+                    <th> # </th>
+                    <th> Name </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> 1 </td>
+                    <td> Kier Borromeo </td>
+                  </tr>
+                  <tr>
+                    <td> 2 </td>
+                    <td> John Doe </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <hr />
 
               <h6 className="title"> Labels </h6>
               <div className="label -default"> Undefined </div>&nbsp;

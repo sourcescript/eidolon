@@ -14,7 +14,7 @@ export default React.createClass({
       height: 'auto',
       // Decrease font size for variation
       fontSize: 10,
-      color: _base['color-base-sub-overlay'],
+      color: _base['sidebar-color'],
       listStyle: 'none'
     };
 

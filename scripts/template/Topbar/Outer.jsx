@@ -8,8 +8,8 @@ export default React.createClass({
     var style = {
       position: 'fixed',
       height: _base['topbar-height'],
+      background: _base['topbar-bg'],
       width: '100%',
-      background: _base['color-base-highlight'],
       color: '#fff'
     };
 

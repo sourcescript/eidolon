@@ -31,15 +31,6 @@ _['color-grey--lt'] = '#f2f2f2';
 
 _['color-base']       = '#000';
 _['color-base-sub']  = _['color-blocked'];
-// The current `color-base-sub`(`color-blocked`) as background perfectly matches
-// `color-grey` as the color of the text on it
-// (or in other words, color of the overlay text).
-// Right now, color-grey == color-base-sub-overlay
-// color-base-sub == color-blocked
-_['color-base-sub-overlay'] = 'rgba(255, 255, 255, 0.6)';
-_['color-base-sub-overlay-highlight'] = _['color-grey--lt'];
-// Highlights from the base
-_['color-base-highlight']  = _['color-primary'];
 // Percentage for use in stylus when darkening / lightening colors
 // e.g., darken(color-base, color--dk)
 // e.g., darken(color-primary, color--dk)
@@ -48,7 +39,9 @@ _['color--dk'] = 15;
 
 // _['body-bg']
 _['text-color'] = '#000';
+
 _['link-color'] = _['color-primary'];
+_['link-decoration'] = 'underline';
 
 /**
  * Typography
@@ -102,6 +95,23 @@ _['padding-base-vt'] = (_['height-base'] - _['line-height-computed']) / 2;
 _['padding-base-hr'] = _['padding-base-vt'];
 
 /**
+ * Table
+ */
+_['table-bg'] = 'transparent';
+_['table-border-color'] = '#ddd';
+_['table-cell-padding'] = 8;
+//** Background color used for `.table-striped`.
+_['table-bg-accent'] = '#f9f9f9';
+//** Background color used for `.table-hover`
+_['table-bg-hover'] = '#f5f5f5';
+
+/**
+ * Input
+ */
+_['input-color'] = '#444';
+_['input-padding'] = 6;
+
+/**
  * Transition settings
  */
 _['transition-base'] = '0.2s';
@@ -116,15 +126,17 @@ _['btn-padding-hr'] = _['padding-base-hr'];
 _['btn-padding-vt'] = _['padding-base-vt'] / 2;
 
 /**
- * Stuff
+ * Sidebar stuff
  */
 _['sidebar-width'] = 250;
 // sidebar-bg == color-base-sub
 // sidebar-color == color-base-sub-overlay
 // This is done this way so there are little
 // complications for further changes ;)
-_['sidebar-bg'] = _['color-base-sub'];
+_['sidebar-color'] = 'rgba(255, 255, 255, 0.6)';
+_['sidebar-bg'] = _['color-blocked'];
 _['sidebar-icon-width'] = 20;
 _['topbar-height'] = _['height-base'];
+_['topbar-bg'] = _['color-primary'];
 
 module.exports = _;
