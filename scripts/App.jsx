@@ -6,6 +6,7 @@ import Topbar from './template/Topbar/index';
 import Content from './template/Content/index';
 import Form from './template/Form/index';
 import Button from './template/Button/index';
+import Label from './template/Label/index';
 import Hr from './template/Misc/Hr';
 
 var App = React.createClass({
@@ -119,7 +120,15 @@ var App = React.createClass({
               <div><Form.Checkbox /></div>
 
               <h6 className="title"> Tables </h6>
+
               <h6 className="title"> Labels </h6>
+              <Label.Default> New </Label.Default>&nbsp;
+              <Label.Primary> New </Label.Primary>&nbsp;
+              <Label.Warning> New </Label.Warning>&nbsp;
+              <Label.Danger> New </Label.Danger>&nbsp;
+              <Label.Success> New </Label.Success>&nbsp;
+              <Label.Blocked> New </Label.Blocked>
+
               <h6 className="title"> Dropdown </h6>
               <h6 className="title"> Tooltip </h6>
             </Content.Body>
