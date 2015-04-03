@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-=======
-# For some windows shit, I don't know why.
-# Anyway, @maebe / Brian committed this ../..
-SYSTEM_32 = C:/Windows/System32
-if [ -d $SYSTEM_32 ]; then \
-	SHELL = $(SYSTEM_32)/cmd.exe \
-fi
-
->>>>>>> 0344dbba17e57fe0be5b7bab0d007d908a5319f2
 BUILD_PATH = ./dist
 FONT_EXT = {woff2,ttf,otf,woff,eot,svg}
 FONT_PATH = $(BUILD_PATH)/fonts
