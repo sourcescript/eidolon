@@ -81,6 +81,8 @@ _['font-size-h5'] = _['font-size-base'];
 _['font-size-h6'] = _['font-size-small'];
 // _['font-size-h6'] = ceil(_['font-size-base'] * 0.85); // ~12px
 
+_['letter-spacing-base'] = '0.4px';
+_['letter-spacing-large'] = '1px';
 _['line-height-base'] = 1.428571429; // <= 20/14
 _['line-height-computed'] = floor(_['font-size-base'] * _['line-height-base']); // ~20
 _['border-radius-base'] = 3;
@@ -90,6 +92,7 @@ _['border-radius-base'] = 3;
  */
 _['screen-xs'] = 480;
 _['screen-sm'] = 768;
+_['screen-md'] = 992;
 
 _['height-base'] = 50;
 _['height-base-lg'] = _['height-base'] * 2;
@@ -121,12 +124,7 @@ _['sidebar-width'] = 250;
 // This is done this way so there are little
 // complications for further changes ;)
 _['sidebar-bg'] = _['color-base-sub'];
-_['sidebar-active-bg'] = 'rgba(0, 0, 0, 0.2)';
-_['sidebar-color'] = _['color-base-sub-overlay'];
-_['sidebar-color-highlight'] = _['color-base-sub-overlay-highlight'];
 _['sidebar-icon-width'] = 20;
-
-_['topbar-color'] = '#fff';
 _['topbar-height'] = _['height-base'];
 
 module.exports = _;

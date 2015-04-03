@@ -1,0 +1,9 @@
+exports.Topbar = require('./template/Topbar/index');
+exports.Sidebar = require('./template/Sidebar/index');
+exports.Content = require('./template/Content/index');
+exports.Button = require('./template/Button/index');
+exports.Form = require('./template/Form/index');
+exports.Label = require('./template/Label/index');
+exports.Dropdown = require('./template/Dropdown/index');
+exports.Tooltip = require('./template/Tooltip/index');
+exports.Hr = require('./template/Other/Hr');

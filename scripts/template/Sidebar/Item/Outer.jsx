@@ -25,18 +25,22 @@ export default React.createClass({
   render() {
     var { style, children, active, ...other } = this.props;
 
+    var _active = 'rgba(0, 0, 0, 0.2)';
+    var _default = _base['color-base-sub-overlay']; // Shorthand
+    var _highlight = _base['color-base-sub-overlay-highlight']; // Shorthand
+
     var style = this.buildStyles(Object.assign({
       height: _base['height-base'],
       listStyle: 'none',
       fontSize: _base['font-size-h6'],
       // Apply the `active` styling accordingly
-      background: active ? _base['sidebar-active-bg'] : 'transparent',
-      color: active ? _base['sidebar-color-highlight'] : _base['sidebar-color'],
+      background: active ? _active : 'transparent',
+      color: active ? _highlight : _default,
 
       // Apply the `active` styling on hover
       states: [{ hover: {
-        background: _base['sidebar-active-bg'],
-        color: _base['sidebar-color-highlight']
+        background: _active,
+        color: _highlight
       } }]
     }, style));
 

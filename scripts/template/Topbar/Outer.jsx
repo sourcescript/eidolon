@@ -7,10 +7,10 @@ export default React.createClass({
 
     var style = {
       position: 'fixed',
-      height: 50,
+      height: _base['topbar-height'],
       width: '100%',
       background: _base['color-base-highlight'],
-      color: _base['topbar-color']
+      color: '#fff'
     };
 
     return (

@@ -6,6 +6,7 @@ import Topbar from './template/Topbar/index';
 import Content from './template/Content/index';
 import Form from './template/Form/index';
 import Button from './template/Button/index';
+import Hr from './template/Misc/Hr';
 
 var App = React.createClass({
   render() {
@@ -77,25 +78,39 @@ var App = React.createClass({
 
         <Content.Outer>
           <Content.Body>
-            <h3>
+            <h4>
               Dashboard
               <small> This is a quick overview of some features </small>
-            </h3>
+            </h4>
           </Content.Body>
 
           <Content.Inner>
             <Content.Body>
-              <h6 className="title"> My Files </h6>
+              <h6 className="title"> Typography </h6>
+              <h1> Heading 1 </h1>
               <h2> Heading 2 </h2>
               <h3> Heading 3 </h3>
-              <Form.Input />
-              <Button.Default> Close </Button.Default>
-              <Button.Primary block={true}> Submit </Button.Primary>
-              <Button.Warning size={'lg'}> Cancel </Button.Warning>
-              <Button.Success size={'xs'}> Save </Button.Success>
-              <Button.Danger size={'sm'}> Remove </Button.Danger>
-              <Button.Blocked> Blocked </Button.Blocked>
-              <a href="..">This is a text</a>
+              <h4> Heading 4 </h4>
+              <h5> Heading 5 </h5>
+              <h6> Heading 6 </h6>
+
+              <Hr />
+
+              <h6 className="title"> Buttons </h6>
+              <Button.Default> Close </Button.Default>&nbsp;
+              <Button.Primary> Submit </Button.Primary>&nbsp;
+              <Button.Warning> Cancel </Button.Warning>&nbsp;
+              <Button.Success> Save </Button.Success>&nbsp;
+              <Button.Danger> Remove </Button.Danger>&nbsp;
+              <Button.Blocked> Blocked </Button.Blocked>&nbsp;
+
+              <h6 className="title"> Input </h6>
+              <div><Form.Input /></div>
+
+              <h6 className="title"> Tables </h6>
+              <h6 className="title"> Labels </h6>
+              <h6 className="title"> Dropdown </h6>
+              <h6 className="title"> Tooltip </h6>
             </Content.Body>
           </Content.Inner>
         </Content.Outer>
