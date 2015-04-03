@@ -41,7 +41,7 @@ export default React.createClass({
     }, style));
 
     return (
-      <li style={style} className="u-text -truncate" {...other} {...this.getBrowserStateEvents()}>
+      <li {...this.getBrowserStateEvents()} style={style} className="u-text -truncate" {...other}>
         {children}
       </li>
     );

@@ -5,6 +5,7 @@ import Sidebar from './template/Sidebar/index';
 import Topbar from './template/Topbar/index';
 import Content from './template/Content/index';
 import Form from './template/Form/index';
+import Button from './template/Button/index';
 
 var App = React.createClass({
   render() {
@@ -77,6 +78,12 @@ var App = React.createClass({
         <Content.Outer>
           <Content.Inner>
             <Form.Input />
+            <Button.Default> Close </Button.Default>
+            <Button.Primary block={true}> Submit </Button.Primary>
+            <Button.Warning size={'lg'}> Cancel </Button.Warning>
+            <Button.Success size={'xs'}> Save </Button.Success>
+            <Button.Danger size={'sm'}> Remove </Button.Danger>
+            <Button.Blocked> Blocked </Button.Blocked>
           </Content.Inner>
         </Content.Outer>
       </div>

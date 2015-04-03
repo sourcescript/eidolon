@@ -26,7 +26,7 @@ _['color-warning']  = '#E5E851';
 _['color-danger']   = '#F24A53';
 _['color-blocked']  = '#3d464d';
 
-_['color-grey']     = 'rgba(255, 255, 255, 0.6)';
+_['color-grey']     = '#ddd';
 _['color-grey--lt'] = '#f2f2f2';
 
 _['color-base']       = '#fff';
@@ -36,7 +36,7 @@ _['color-base-sub']  = _['color-blocked'];
 // (or in other words, color of the overlay text).
 // Right now, color-grey == color-base-sub-overlay
 // color-base-sub == color-blocked
-_['color-base-sub-overlay'] = _['color-grey'];
+_['color-base-sub-overlay'] = 'rgba(255, 255, 255, 0.6)';
 _['color-base-sub-overlay-highlight'] = _['color-grey--lt'];
 _['color-base-highlight']  = _['color-primary'];
 // Percentage for use in stylus when darkening colors
@@ -100,6 +100,13 @@ _['padding-base-hr'] = _['padding-base-vt'];
 _['transition-base'] = '0.2s';
 _['transition-base-short'] = _['transition-base'] / 1.5;
 _['transition-base-long'] = _['transition-base'] * 2;
+
+/**
+ * Btn variables
+ */
+_['btn-font-family'] = _['headings-font-family'];
+_['btn-padding-hr'] = _['padding-base-hr'];
+_['btn-padding-vt'] = _['padding-base-vt'] / 2;
 
 /**
  * Stuff
