@@ -16,59 +16,59 @@ var App = React.createClass({
         <Sidebar.Outer>
           <Sidebar.List>
             <Sidebar.Item.Title> Main </Sidebar.Item.Title>
-            <Sidebar.Item.Outer>
+            <Sidebar.Item.Component>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-home" /></Sidebar.Item.Icon>
                 Dashboard
               </Sidebar.Item.Link>
-            </Sidebar.Item.Outer>
+            </Sidebar.Item.Component>
 
-            <Sidebar.Item.Outer active={false}>
+            <Sidebar.Item.Component active={false}>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-cog" /></Sidebar.Item.Icon>
                 Manage Account
               </Sidebar.Item.Link>
-            </Sidebar.Item.Outer>
+            </Sidebar.Item.Component>
 
-            <Sidebar.Item.Outer active={true}>
+            <Sidebar.Item.Component active={true}>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-users" /></Sidebar.Item.Icon>
                 Manage Users
               </Sidebar.Item.Link>
-            </Sidebar.Item.Outer>
+            </Sidebar.Item.Component>
 
-            <Sidebar.Item.Outer active={false}>
+            <Sidebar.Item.Component active={false}>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-envelope-o" /></Sidebar.Item.Icon>
                 Messages
               </Sidebar.Item.Link>
-            </Sidebar.Item.Outer>
+            </Sidebar.Item.Component>
 
             <Sidebar.Item.Separator />
           </Sidebar.List>
 
           <Sidebar.List>
             <Sidebar.Item.Title> More </Sidebar.Item.Title>
-            <Sidebar.Item.Outer active={false}>
+            <Sidebar.Item.Component active={false}>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-map-marker" /></Sidebar.Item.Icon>
                 Maps
               </Sidebar.Item.Link>
-            </Sidebar.Item.Outer>
+            </Sidebar.Item.Component>
 
-            <Sidebar.Item.Outer active={false}>
+            <Sidebar.Item.Component active={false}>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-calendar-o" /></Sidebar.Item.Icon>
                 Calendar
               </Sidebar.Item.Link>
-            </Sidebar.Item.Outer>
+            </Sidebar.Item.Component>
 
-            <Sidebar.Item.Outer active={false}>
+            <Sidebar.Item.Component active={false}>
               <Sidebar.Item.Link href="..">
                 <Sidebar.Item.Icon><i className="fa fa-th" /></Sidebar.Item.Icon>
                 List
               </Sidebar.Item.Link>
-            </Sidebar.Item.Outer>
+            </Sidebar.Item.Component>
           </Sidebar.List>
         </Sidebar.Outer>
 
