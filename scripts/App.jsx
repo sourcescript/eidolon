@@ -42,6 +42,8 @@ var App = React.createClass({
                 Messages
               </Sidebar.Item.Link>
             </Sidebar.Item.Outer>
+
+            <Sidebar.Item.Separator />
           </Sidebar.List>
 
           <Sidebar.List>

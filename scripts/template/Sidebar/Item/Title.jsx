@@ -1,6 +1,5 @@
 import React from 'react';
 import _base from '../../styles';
-import Outer from './Outer';
 
 export default React.createClass({
   render() {
@@ -14,9 +13,11 @@ export default React.createClass({
       // variation and be recognizable
       height: 'auto',
       // Decrease font size for variation
-      fontSize: 10
+      fontSize: 10,
+      color: _base['color-base-sub-overlay'],
+      listStyle: 'none'
     };
 
-    return <Outer style={style} className="u-text -up"> {children} </Outer>;
+    return <li style={style} className="u-text -up"> {children} </li>;
   }
 })
