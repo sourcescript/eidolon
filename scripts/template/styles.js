@@ -22,7 +22,7 @@ _['bower'] = '/../bower_components/';
  */
 _['color-primary']  = '#399bff';
 _['color-success']  = '#4AD1A3';
-_['color-warning']  = '#E5E851';
+_['color-warning']  = '#FFD500';
 _['color-danger']   = '#F24A53';
 _['color-blocked']  = '#3d464d';
 
