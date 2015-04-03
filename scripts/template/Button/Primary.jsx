@@ -9,7 +9,7 @@ export default React.createClass({
 
     var style = Object.assign({
       borderColor: color,
-      states: [{ hover: { backgroundColor: color } }]
+      states: [{ hover: { backgroundColor: color, color: '#fff' } }]
     }, style);
 
     return (

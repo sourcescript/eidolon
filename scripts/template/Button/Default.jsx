@@ -79,7 +79,8 @@ export default React.createClass({
       // Invert the backgroundColor and borderColor on hover
       states: [{ hover: {
         backgroundColor: _base['color-grey'],
-        borderColor: 'transparent'
+        borderColor: 'transparent',
+        color: '#fff'
       } }]
     }, style));
 
