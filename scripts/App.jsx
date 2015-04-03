@@ -138,12 +138,6 @@ var App = React.createClass({
                 <button className="btn -success -lg"> Hello </button>&nbsp;
               </div>
 
-              <Button.Group style={{ marginTop: 10 }}>
-                <Button.Success> Save </Button.Success>
-                <Button.Success> Remove </Button.Success>
-                <Button.Success> Do Something </Button.Success>
-              </Button.Group>
-
               <hr />
               <div style={{ width: '50%' }}>
                 <h6 className="title"> Alert </h6>
@@ -163,11 +157,11 @@ var App = React.createClass({
               <h6 className="title"> Tables </h6>
 
               <h6 className="title"> Labels </h6>
-              <div className="label -default"> New </div>&nbsp;
-              <div className="label -primary"> New </div>&nbsp;
-              <div className="label -warning"> New </div>&nbsp;
-              <div className="label -danger"> New </div>&nbsp;
-              <div className="label -success"> New </div>&nbsp;
+              <div className="label -default"> Undefined </div>&nbsp;
+              <div className="label -primary"> Note </div>&nbsp;
+              <div className="label -warning"> Oops! </div>&nbsp;
+              <div className="label -danger"> Error </div>&nbsp;
+              <div className="label -success"> Success! </div>&nbsp;
 
               <h6 className="title"> Dropdown </h6>
               <h6 className="title"> Tooltip </h6>
