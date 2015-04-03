@@ -1,3 +1,19 @@
+// Base
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+  font-family unquote(headings-font-family)
+  font-weight headings-font-weight
+  color unquote(headings-color)
+  margin-top unit(line-height-computed / 2, px)
+  margin-bottom unit(line-height-computed / 2, px)
+
+  small, .small
+    font-size 60%
+
 h1, .h1
   font-size unit(font-size-h1, px)
 
@@ -17,4 +33,22 @@ h6, .h6
   font-size unit(font-size-h6, px)
 
 p
-  font-size unit(font-size-base, px)
+  margin 0 0 unit(line-height-computed / 2, px)
+
+small
+  font-family unquote(font-family-base)
+  display block
+  color unquote(headings-small-color)
+
+.title
+  color: unquote(color-base-sub)
+  text-transform uppercase
+  font-weight bold
+
+a
+  color unquote(link-color)
+  text-decoration none
+
+  &:hover
+    color darken(rgba(convert(link-color)), color--dk)
+    text-decoration underline

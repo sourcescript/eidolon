@@ -26,10 +26,10 @@ _['color-warning']  = '#E5E851';
 _['color-danger']   = '#F24A53';
 _['color-blocked']  = '#3d464d';
 
-_['color-grey']     = '#ddd';
+_['color-grey']     = '#999';
 _['color-grey--lt'] = '#f2f2f2';
 
-_['color-base']       = '#fff';
+_['color-base']       = '#000';
 _['color-base-sub']  = _['color-blocked'];
 // The current `color-base-sub`(`color-blocked`) as background perfectly matches
 // `color-grey` as the color of the text on it
@@ -38,15 +38,17 @@ _['color-base-sub']  = _['color-blocked'];
 // color-base-sub == color-blocked
 _['color-base-sub-overlay'] = 'rgba(255, 255, 255, 0.6)';
 _['color-base-sub-overlay-highlight'] = _['color-grey--lt'];
+// Highlights from the base
 _['color-base-highlight']  = _['color-primary'];
-// Percentage for use in stylus when darkening colors
+// Percentage for use in stylus when darkening / lightening colors
 // e.g., darken(color-base, color--dk)
 // e.g., darken(color-primary, color--dk)
-_['color--dk'] = '5%';
+_['color--lt'] = 15;
+_['color--dk'] = 15;
 
-/**
- *
- */
+// _['body-bg']
+_['text-color'] = '#000';
+_['link-color'] = _['color-primary'];
 
 /**
  * Typography
@@ -64,6 +66,8 @@ _['montserrat-weight-bold'] = 700;
 _['headings-font-family'] = '"Montserrat", sans-serif';
 _['headings-font-weight'] = _['montserrat-weight-normal'];
 _['headings-line-height'] = 1.1; // IDK y
+_['headings-color'] = _['text-color'];
+_['headings-small-color'] = _['color-grey']; // IDK y
 
 _['font-size-base'] = 14
 _['font-size-large'] = ceil(_['font-size-base'] * 1.25); // ~18px

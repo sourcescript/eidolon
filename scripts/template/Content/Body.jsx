@@ -5,11 +5,12 @@ export default React.createClass({
   render() {
     var { children, ...other } = this.props;
 
+    var vt = _base['padding-base-vt'];
+    var hr = _base['padding-base-hr'];
     var style = {
-      paddingTop: _base['topbar-height'],
-      marginLeft: _base['sidebar-width'],
-      background: _base['color-grey--lt'],
-      minHeight: '100vh'
+      padding: `${vt}px ${hr}px`,
+      background: '#fff',
+      marginBottom: vt
     };
 
     return (

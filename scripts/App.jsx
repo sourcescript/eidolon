@@ -76,14 +76,27 @@ var App = React.createClass({
         </Topbar.Outer>
 
         <Content.Outer>
+          <Content.Body>
+            <h3>
+              Dashboard
+              <small> This is a quick overview of some features </small>
+            </h3>
+          </Content.Body>
+
           <Content.Inner>
-            <Form.Input />
-            <Button.Default> Close </Button.Default>
-            <Button.Primary block={true}> Submit </Button.Primary>
-            <Button.Warning size={'lg'}> Cancel </Button.Warning>
-            <Button.Success size={'xs'}> Save </Button.Success>
-            <Button.Danger size={'sm'}> Remove </Button.Danger>
-            <Button.Blocked> Blocked </Button.Blocked>
+            <Content.Body>
+              <h6 className="title"> My Files </h6>
+              <h2> Heading 2 </h2>
+              <h3> Heading 3 </h3>
+              <Form.Input />
+              <Button.Default> Close </Button.Default>
+              <Button.Primary block={true}> Submit </Button.Primary>
+              <Button.Warning size={'lg'}> Cancel </Button.Warning>
+              <Button.Success size={'xs'}> Save </Button.Success>
+              <Button.Danger size={'sm'}> Remove </Button.Danger>
+              <Button.Blocked> Blocked </Button.Blocked>
+              <a href="..">This is a text</a>
+            </Content.Body>
           </Content.Inner>
         </Content.Outer>
       </div>
