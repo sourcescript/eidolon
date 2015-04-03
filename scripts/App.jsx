@@ -108,6 +108,9 @@ var App = React.createClass({
 
               <h6 className="title"> Input </h6>
               <div><Form.Input /></div>
+              <div><Form.TextArea /></div>
+              <div><Form.Radio /></div>
+              <div><Form.Checkbox /></div>
 
               <h6 className="title"> Tables </h6>
               <h6 className="title"> Labels </h6>
