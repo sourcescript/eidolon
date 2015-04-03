@@ -8,6 +8,7 @@ export default React.createClass({
     var color = _base['color-primary']; // Shorthand
 
     var style = Object.assign({
+      color: color,
       borderColor: color,
       states: [{ hover: { backgroundColor: color, color: '#fff' } }]
     }, style);
