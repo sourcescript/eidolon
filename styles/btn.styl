@@ -35,8 +35,10 @@ btn-size(size = 1, fsize = 14px)
  * <button class="btn -primary -block -sm -inverse" />
  */
 .btn
+  // We'll use `inline-block` as its `display` so it doesn't act like an asshole
   display inline-block
   width auto
+  // We won't provide any argument since we want to use the mixin defaults
   btn-size()
   font-family unquote(btn-font-family)
   text-align center
@@ -89,6 +91,19 @@ btn-size(size = 1, fsize = 14px)
   &.-lg
     btn-size(2, 16px)
 
-// .btn-group
-//   .btn
-//     float left
+/**
+ * Button group!
+ */
+.btn-group
+  // Implement the clearfix hack since all child `btn` inside this element
+  // will be implemented as a `block` (opress) to the `inline-block` of .btns
+  // and floated to rid of spaces between each .btn
+  // (which is a nature of `inline-block`)
+  // More :: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+  @extends .u-clearfix
+
+  .btn
+    // Rid of the spaces between each `sibling` by turning the
+    // `display` to `block` and `float`ing the element
+    display: block
+    @extends .u-clearfix > .-left

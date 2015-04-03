@@ -1,0 +1,62 @@
+.sidebar
+  & > ul
+    margin 0
+    padding 0
+
+  & > ul > li
+    list-style none
+    color unquote(sidebar-color)
+
+  & > ul > li.separator
+    // Since we are using `border`, we'll avoid `padding` and use margins instead.
+    padding: 0
+    margin: unit(base-padding-vt, px) unit(base-padding-hr, px) unit(base-padding-vt * 2, px) unit(base-padding-hr, px)
+    border-bottom: '1px solid rgba(0, 0, 0, 0.2)'
+
+  & > ul > li.title
+    padding unit(base-padding-vt, px) unit(base-padding-hr / 2, px)
+    letter-spacing base-letter-spacing
+    font-size 10,
+
+  & > ul > li.item
+    height: unit(height-base, px)
+    list-style: none
+    background: transparent
+    color: unquote(sidebar-color)
+    border-left: none
+
+  & > ul > li.item:hover,
+  & > ul > li.item.is-active
+    background rgba(0, 0, 0, 0.2)
+
+  // We apply this on a separatee line because
+  // we only apply this to items with the `active` class
+  & > ul > li.item.is-active
+    border-left 2px solid unquote(color-primary)
+
+  & > ul > li.item > a
+    // We'll make this a relative for the chilren elements (`icons`)
+    // that will be given a position of `absolute` for flexibility purposes
+    position relative
+    display block
+    padding unit(base-padding-vt, px) unit(base-padding-hr, px) unit(base-padding-vt * 2, px) unit(base-padding-hr, px)
+    height height-base
+    width 100%
+    color #f2f2f2
+    text-decoration none
+
+  & > ul > li.item > a > .pre-icon
+    // For flexibility purposes
+    position absolute
+    // Properly align it with the text
+    top unit(sidebar-icon-width / 2, px)
+    left unit(sidebar-icon-width, px)
+    fontSize 18
+
+    & > ul > li.item > a > .post-icon
+      // For flexibility purposes
+      position absolute
+      // Properly align it with the text
+      top unit(sidebar-icon-width / 2, px)
+      right 0
+      fontSize 18
