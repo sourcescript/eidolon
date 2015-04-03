@@ -81,8 +81,8 @@ _['font-size-h5'] = _['font-size-base'];
 _['font-size-h6'] = _['font-size-small'];
 // _['font-size-h6'] = ceil(_['font-size-base'] * 0.85); // ~12px
 
-_['letter-spacing-base'] = '0.4px';
-_['letter-spacing-large'] = '1px';
+_['letter-spacing-base'] = 0.4;
+_['letter-spacing-large'] = 1;
 _['line-height-base'] = 1.428571429; // <= 20/14
 _['line-height-computed'] = floor(_['font-size-base'] * _['line-height-base']); // ~20
 _['border-radius-base'] = 3;

@@ -1,0 +1,35 @@
+/**
+ * Mixins
+ */
+alert-variant(color)
+  background color
+  border-color darken(color, color--lt)
+
+/**
+ * Buttons
+ * @usage
+ * <div class=" -success" />
+ */
+.alert
+  width 100%
+  padding unit(padding-base-vt, px) unit(padding-base-hr, px)
+  vertical-align middle
+  background-color color-grey
+  border 1px solid
+  border-color transparent
+  border-radius border-radius-base
+
+  /**
+   * Color variants
+   */
+  &.-primary
+    alert-variant(convert(color-primary))
+
+  &.-success
+    alert-variant(convert(color-success))
+
+  &.-warning
+    alert-variant(convert(color-warning))
+
+  &.-danger
+    alert-variant(convert(color-danger))

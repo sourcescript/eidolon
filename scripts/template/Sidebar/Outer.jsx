@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleResolverMixin, MatchMediaItem } from 'radium';
 import _base from '../styles';
 
 export default React.createClass({

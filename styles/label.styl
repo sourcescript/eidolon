@@ -1,0 +1,39 @@
+/**
+ * Mixins
+ */
+label-variant(color)
+  background color
+
+/**
+ * Label
+ * @usage
+ * <div class="label -success" />
+ */
+.label
+  display inline-block
+  padding 2px 5px
+  color #fff
+  font-size 10px
+  font-family unquote(headings-font-family)
+  text-transform uppercase
+  letter-spacing unit(letter-spacing-base, px)
+  background-color transparent
+  border-radius unit(border-radius-base, px)
+
+  /**
+   * Color variants
+   */
+  &.-default
+    label-variant(unquote(color-grey))
+
+  &.-primary
+    label-variant(unquote(color-primary))
+
+  &.-success
+    label-variant(unquote(color-success))
+
+  &.-warning
+    label-variant(unquote(color-warning))
+
+  &.-danger
+    label-variant(unquote(color-danger))

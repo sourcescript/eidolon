@@ -1,18 +1,94 @@
-// .btn
-//   &.-default
-//   &.-default.-inverse
-//
-//   &.-primary
-//   &.-primary.-inverse
-//
-//   &.-danger
-//   &.-danger.-inverse
-//
-//   &.-warning
-//
-//   &.-warning.-inverse
-//
-//   &.-success
-//
-//   &.-succcess.-inverse
-//
+/**
+ * Mixins
+ */
+
+// Creates varying of the btn
+btn-variant(color)
+  color color
+  border-color color
+  background transparent
+
+  &:hover
+    color #fff
+    border-color transparent
+    background color
+
+  // Setup inverse result of the above properties
+  &.-inverse
+    color #fff
+    border-color transparent
+    background color
+
+    &:hover
+      color color
+      border-color color
+      background transparent
+
+// Multiply base padding against provided value
+btn-size(size = 1, fsize = 14px)
+  font-size fsize
+  padding unit(btn-padding-vt * size, px) unit(btn-padding-hr * size, px)
+
+/**
+ * Buttons
+ * @usage
+ * <button class="btn -primary -block -sm -inverse" />
+ */
+.btn
+  display inline-block
+  width auto
+  btn-size()
+  font-family unquote(btn-font-family)
+  text-align center
+  text-transform uppercase
+  letter-spacing unit(letter-spacing-base, px)
+  vertical-align middle
+  touch-action manipulation
+  cursor pointer
+  white-space nowrap
+  // Reset unusual Firefox-on-Android default style;
+  // see https//github.com/necolas/normalize.css/issues/214
+  background-image none
+  background-color transparent
+  border 1px solid
+  border-color transparent
+  border-radius unit(border-radius-base, px)
+  transition transition-base
+
+  /**
+   * Color variants (and its inverses)
+   */
+  &.-default
+    btn-variant(unquote(color-grey))
+
+  &.-primary
+    btn-variant(unquote(color-primary))
+
+  &.-success
+    btn-variant(unquote(color-success))
+
+  &.-warning
+    btn-variant(unquote(color-warning))
+
+  &.-danger
+    btn-variant(unquote(color-danger))
+
+  /**
+   * Size variants
+   */
+  &.-block
+    display block
+    width 100%
+
+  &.-xs
+    btn-size(.5, 10px)
+
+  &.-sm
+    btn-size(.75, 12px)
+
+  &.-lg
+    btn-size(2, 16px)
+
+// .btn-group
+//   .btn
+//     float left
