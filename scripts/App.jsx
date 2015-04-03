@@ -106,6 +106,12 @@ var App = React.createClass({
               <Button.Danger> Remove </Button.Danger>&nbsp;
               <Button.Blocked> Blocked </Button.Blocked>&nbsp;
 
+              <Button.Group style={{ marginTop: 10 }}>
+                <Button.Success> Save </Button.Success>
+                <Button.Success> Remove </Button.Success>
+                <Button.Success> Do Something </Button.Success>
+              </Button.Group>
+
               <h6 className="title"> Input </h6>
               <div><Form.Input /></div>
               <div><Form.TextArea /></div>

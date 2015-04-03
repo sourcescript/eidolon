@@ -4,13 +4,13 @@ import Default from './Default';
 
 export default React.createClass({
   render() {
-    var { children, ...other } = this.props;
+    var { style, children, ...other } = this.props;
     var color = _base['color-primary']; // Shorthand
 
-    var style = {
+    var style = Object.assign({
       borderColor: color,
       states: [{ hover: { backgroundColor: color } }]
-    };
+    }, style);
 
     return (
       <Default style={style} {...other}>
