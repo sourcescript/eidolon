@@ -1,3 +1,4 @@
+// ES6 Polyfill
 require("babel/polyfill");
 
 import React from 'react';

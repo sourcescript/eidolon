@@ -1,4 +1,4 @@
-exports.Input = require('./Input');
-exports.TextArea = require('./TextArea');
-exports.Radio = require('./Radio');
-exports.Checkbox = require('./Checkbox');
+export Input from './Input';
+export TextArea from './TextArea';
+export Radio from './Radio';
+export Checkbox from './Checkbox';

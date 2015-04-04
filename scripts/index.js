@@ -1,6 +1,6 @@
-exports.Topbar = require('./template/Topbar/index');
-exports.Sidebar = require('./template/Sidebar/index');
-exports.Content = require('./template/Content/index');
-exports.Form = require('./template/Form/index');
-exports.Dropdown = require('./template/Dropdown/index');
-exports.Tooltip = require('./template/Tooltip/index');
+export Topbar from './template/Topbar/index';
+export Sidebar from './template/Sidebar/index';
+export Content from './template/Content/index';
+export Form from './template/Form/index';
+export Dropdown from './template/Dropdown/index';
+export Tooltip from './template/Tooltip/index';
