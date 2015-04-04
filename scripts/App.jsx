@@ -2,8 +2,7 @@
 require("babel/polyfill");
 
 import React from 'react';
-import Form from './template/Form/index';
-import { Sidebar, Topbar, Content } from './index';
+import { Sidebar, Topbar, Content, Form } from './index';
 
 var App = React.createClass({
   render() {
