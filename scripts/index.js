@@ -1,6 +1,6 @@
-export Topbar from './template/Topbar/index';
-export Sidebar from './template/Sidebar/index';
-export Content from './template/Content/index';
-export Form from './template/Form/index';
-export Dropdown from './template/Dropdown/index';
-export Tooltip from './template/Tooltip/index';
+export * as Topbar from './template/Topbar/index';
+export * as Sidebar from './template/Sidebar/index';
+export * as Content from './template/Content/index';
+export * as Form from './template/Form/index';
+export * as Dropdown from './template/Dropdown/index';
+export * as Tooltip from './template/Tooltip/index';
