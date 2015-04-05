@@ -43,7 +43,7 @@ install:
 
 	# create directory if it doesn't exist yet
 	# to avoid filesystem conflicts or whatsoever
-	mkdir -p $(BUILD_PATH)/css
+	mkdir -p $(CSS_PATH)
 	mkdir -p $(JS_PATH)
 	mkdir -p $(FONT_PATH)
 
