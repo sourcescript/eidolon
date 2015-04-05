@@ -4,12 +4,14 @@ FONT_PATH = $(BUILD_PATH)/fonts
 NPM_PATH = ./node_modules/.bin
 BOWER_PATH = ./bower_components
 #
+JS_PATH = $(BUILD_PATH)/js
 WEBPACK = $(NPM_PATH)/webpack
 WEBPACK_OPT = -d --display-error-details
 #
+CSS_PATH = $(BUILD_PATH)/css
 STYLUS = $(NPM_PATH)/stylus
 STYLUS_PATH = ./styles
-STYLUS_OPT = -m --include-css --include ./styles/ --use ./stylus.js < ./styles/main.styl > ./dist/css/style.css
+STYLUS_OPT = -m --include-css --include ./styles/ --use ./stylus.js < ./styles/main.styl > $(CSS_PATH)/style.css
 
 # Builds the scripts
 build:
@@ -21,7 +23,6 @@ build:
 # http://stackoverflow.com/questions/793858/how-to-mkdir-only-if-a-dir-does-not-already-exist
 style:
 	$(STYLUS) $(STYLUS_OPT)
-	mkdir -p $(BUILD_PATH)
 
 	# copy font-awesome
 	cp $(BOWER_PATH)/font-awesome/fonts/*.$(FONT_EXT) $(FONT_PATH)
@@ -37,12 +38,17 @@ watch:
 
 # Installs dependencies
 install:
-	npm install webpack babel bower -g
 	npm install
 	bower install
 
+	# create directory if it doesn't exist yet
+	# to avoid filesystem conflicts or whatsoever
+	mkdir -p $(BUILD_PATH)/css
+	mkdir -p $(JS_PATH)
+	mkdir -p $(FONT_PATH)
+
 # Run tests
 test:
-	NPM_PATH test
+	npm test
 
 .PHONY: build style
