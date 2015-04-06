@@ -1,7 +1,7 @@
 {
-  "name": "eidolon",
+  "name": "suleras",
   "version": "0.1.0",
-  "description": "",
+  "description": "The coolest dashboard written in ReactJS",
   "main": "scripts/index.js",
   "directories": {
     "doc": "docs"
@@ -16,8 +16,8 @@
     "type": "git",
     "url": "https://github.com/sourcescript/eidolon.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Kier Borromeo <seraphipod@gmail.com> (https://srph.github.io)",
+  "license": "MIT",
   "dependencies": {
     "radium": "^0.10.1",
     "react": "^0.13.1"

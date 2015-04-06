@@ -1,4 +1,4 @@
-# Eidolon
+# suleras
 
 The coolest dashboard ever, written in ReactJS.
 
@@ -13,4 +13,4 @@ The coolest dashboard ever, written in ReactJS.
 
 ## Acknowledgement
 
-**eidolon** © 2015+, Sourcescript.
+**suleras** © 2015+, Sourcescript.
