@@ -1,5 +1,5 @@
 {
-  "name": "eidolon",
+  "name": "suleras",
   "version": "0.1.0",
   "authors": [
     "srph <seraphipod@gmail.com>"
@@ -10,7 +10,9 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "docs",
+    "webpack.config.js"
   ],
   "dependencies": {
     "normalize.css": "~3.0.3",
