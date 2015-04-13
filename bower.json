@@ -17,6 +17,7 @@
   "dependencies": {
     "normalize.css": "~3.0.3",
     "galawan": "~0.1.0",
-    "typicons": "~2.0.7"
+    "typicons": "~2.0.7",
+    "font-awesome": "~4.3.0"
   }
 }
