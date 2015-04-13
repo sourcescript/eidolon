@@ -12,5 +12,6 @@ The coolest dashboard ever, written in ReactJS.
   - [Coding Style](docs/getting-started.md#coding-style)
 
 ## Acknowledgement
+- [Jc Ricaro](https://github.com/jcricaro)
 
 **suleras** © 2015+, Sourcescript.
