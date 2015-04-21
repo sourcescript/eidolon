@@ -1,0 +1,80 @@
+.sidebar {
+  max-height: 100vh;
+  width $sidebar-width;
+  font-family: $headings-font-family;
+  overflow: scroll;
+  position: fixed;
+  margin-top: $topbar-height;
+  padding-top: $padding-base-vt;
+  padding-bottom: $padding-base-hr;
+
+  & > ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  & > ul > li {
+    list-style: none;
+    color $sidebar-color;
+  }
+
+  & > ul > li.separator {
+    // Since we are using `border`, we'll avoid `padding` and use margins instead.
+    padding: 0;
+    margin: $padding-base-vt $padding-base-hr ($padding-base-vt * 2) $padding-base-hr;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  & > ul > li.title {
+    padding: $padding-base-vt ($padding-base-hr / 2);
+    letter-spacing: $base-letter-spacing;
+    font-size: 10;
+  }
+
+  & > ul > li.item {
+    height: $height-base;
+    list-style: none;
+    background: transparent;
+    color: $sidebar-color;
+    border-left: none;
+  }
+
+  & > ul > li.item:hover,
+  & > ul > li.item.item--active {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  // We apply this on a separatee line because
+  // we only apply this to items with the `active` class
+  & > ul > li.item.item--active { border-left: 2px solid $color-primary; }
+
+  & > ul > li.item > a {
+    // We'll make this a relative for the chilren elements (`icons`)
+    // that will be given a position of `absolute` for flexibility purposes
+    position: relative;
+    display: block;
+    padding: $padding-base-vt $padding-base-hr ($padding-base-vt * 2) $padding-base-hr;
+    height: $height-base;
+    width: 100%;
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+
+  & > ul > li.item > a > .pre-icon,
+  & > ul > li.item > a > .post-icon {
+    position: absolute;
+    font-size: 18px;
+  }
+
+  & > ul > li.item > a > .pre-icon {
+    // Properly align it with the text
+    top: ($sidebar-icon-width / 2);
+    left: $sidebar-icon-width;
+  }
+
+  & > ul > li.item > a > .post-icon {
+    // Properly align it with the text
+    top: ($sidebar-icon-width / 2);
+    right: 0;
+  }
+}
