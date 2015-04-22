@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start --single-run"
   },
   "repository": {
     "type": "git",
