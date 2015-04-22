@@ -18,20 +18,22 @@
     color $sidebar-color;
   }
 
-  & > ul > li.separator {
+  & > ul > li.sidebar__item-separator {
     // Since we are using `border`, we'll avoid `padding` and use margins instead.
     padding: 0;
     margin: $padding-base-vt $padding-base-hr ($padding-base-vt * 2) $padding-base-hr;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
-  & > ul > li.title {
+  & > ul > li.sidebar__item-title {
+    @extend .u-text.u-text--up;
     padding: $padding-base-vt ($padding-base-hr / 2);
     letter-spacing: $base-letter-spacing;
     font-size: 10;
   }
 
-  & > ul > li.item {
+  & > ul > li.sidebar__item {
+    @extend .u-text.u-text--truncate;
     height: $height-base;
     list-style: none;
     background: transparent;
@@ -39,16 +41,17 @@
     border-left: none;
   }
 
-  & > ul > li.item:hover,
-  & > ul > li.item.item--active {
+  & > ul > li.sidebar__item:hover,
+  & > ul > li.sidebar__item.item.active,
+  & > ul > li.sidebar__item.item--active {
     background: rgba(0, 0, 0, 0.2);
   }
 
   // We apply this on a separatee line because
   // we only apply this to items with the `active` class
-  & > ul > li.item.item--active { border-left: 2px solid $color-primary; }
+  & > ul > li.sidebar__item.sidebar__item--active { border-left: 2px solid $color-primary; }
 
-  & > ul > li.item > a {
+  & > ul > li.sidebar__item > a {
     // We'll make this a relative for the chilren elements (`icons`)
     // that will be given a position of `absolute` for flexibility purposes
     position: relative;
@@ -60,19 +63,19 @@
     text-decoration: none;
   }
 
-  & > ul > li.item > a > .pre-icon,
-  & > ul > li.item > a > .post-icon {
+  & > ul > li.sidebar__item > a > .sidebar__item__pre-icon,
+  & > ul > li.sidebar__item > a > .sidebar__item__post-icon {
     position: absolute;
     font-size: 18px;
   }
 
-  & > ul > li.item > a > .pre-icon {
+  & > ul > li.sidebar__item > a > .sidebar__item__pre-icon {
     // Properly align it with the text
     top: ($sidebar-icon-width / 2);
     left: $sidebar-icon-width;
   }
 
-  & > ul > li.item > a > .post-icon {
+  & > ul > li.sidebar__item > a > .sidebar__item__post-icon {
     // Properly align it with the text
     top: ($sidebar-icon-width / 2);
     right: 0;
