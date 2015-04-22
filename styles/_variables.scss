@@ -8,21 +8,19 @@ $brand-success: #4AD1A3;
 $brand-warning: #FFD500;
 $brand-danger : #F24A53;
 $brand-blocked: #3d464d;
-
 $brand-grey: #999;
 $brand-grey--lt: #f2f2f2;
 
 $brand-base: #000;
 $brand-base-sub: $brand-blocked;
-// Percentage for use in stylus when darkening / lightening colors
+// Percentage for use when darkening / lightening colors
 // e.g., darken(brand-base, brand--dk)
 // e.g., darken(brand-primary, brand--dk)
-$brand--lt: 15;
-$brand--dk: 15;
+$brand--lt: 15%;
+$brand--dk: 15%;
 
 // $body-bg
 $text-color: #000;
-
 $link-color: $brand-primary;
 $link-decoration: underline;
 
@@ -45,7 +43,7 @@ $headings-line-height: 1.1; // IDK y
 $headings-color: $text-color;
 $headings-small-color: $brand-grey; // IDK y
 
-$font-size-base: 14
+$font-size-base: 14px;
 $font-size-large: ceil($font-size-base * 1.25); // ~18px
 $font-size-small: ceil($font-size-base * 0.85); // ~12px
 $font-size-h1: ceil($font-size-base * 2.6); // 36px
@@ -61,17 +59,11 @@ $letter-spacing-base: 0.4;
 $letter-spacing-large: 1;
 $line-height-base: 1.428571429; // <: 20/14
 $line-height-computed: floor($font-size-base * $line-height-base); // ~20
-$border-radius-base: 3;
+$border-radius-base: 3px;
+$border-radius-circle: 50%;
 
-/**
- * Screen sizes
- */
-$screen-xs: 480;
-$screen-sm: 768;
-$screen-md: 992;
-
-$height-base: 50;
-$height-base-lg: $height-base * 2;
+$height-base: 50px;
+$height-base-lg: ($height-base * 2);
 $height-base-sm: $height-base / 2;
 
 $padding-base-vt: ($height-base - $line-height-computed) / 2;
@@ -82,7 +74,7 @@ $padding-base-hr: $padding-base-vt;
  */
 $table-bg: transparent;
 $table-border-color: #ddd;
-$table-cell-padding: 8;
+$table-cell-padding: 8px;
 //** Background color used for `.table-striped`.
 $table-bg-accent: #f9f9f9;
 //** Background color used for `.table-hover`
@@ -92,7 +84,7 @@ $table-bg-hover: #f5f5f5;
  * Input
  */
 $input-color: #444;
-$input-padding: 6;
+$input-padding: 6px;
 
 /**
  * Transition settings
@@ -111,13 +103,13 @@ $btn-padding-vt: $padding-base-vt / 2;
 /**
  * Sidebar stuff
  */
-$sidebar-width: 250;
+$sidebar-width: 250px;
 // sidebar-bg:: brand-base-sub
 // sidebar-color:: brand-base-sub-overlay
 // This is done this way so there are little
 // complications for further changes ;)
 $sidebar-color: rgba(255, 255, 255, 0.6);
 $sidebar-bg: $brand-blocked;
-$sidebar-icon-width: 20;
+$sidebar-icon-width: 20px;
 $topbar-height: $height-base;
 $topbar-bg: $brand-primary;

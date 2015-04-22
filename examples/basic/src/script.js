@@ -10,60 +10,60 @@ var App = React.createClass({
       <div>
         <Sidebar.Outer>
           <Sidebar.List>
-            <Sidebar.Item.Title> Main </Sidebar.Item.Title>
-            <Sidebar.Item.Component>
-              <Sidebar.Item.Link href="..">
-                <Sidebar.Item.Icon><i className="fa fa-home" /></Sidebar.Item.Icon>
+            <Sidebar.ListTitle> Main </Sidebar.ListTitle>
+            <Sidebar.ListItem>
+              <Sidebar.ListItemLink href="..">
+                <Sidebar.ListItemLinkIcon><i className="fa fa-home" /></Sidebar.ListItemLinkIcon>
                 Dashboard
-              </Sidebar.Item.Link>
-            </Sidebar.Item.Component>
+              </Sidebar.ListItemLink>
+            </Sidebar.ListItem>
 
-            <Sidebar.Item.Component active={false}>
-              <Sidebar.Item.Link href="..">
-                <Sidebar.Item.Icon><i className="fa fa-cog" /></Sidebar.Item.Icon>
+            <Sidebar.ListItem active={false}>
+              <Sidebar.ListItemLink href="..">
+                <Sidebar.ListItemLinkIcon><i className="fa fa-cog" /></Sidebar.ListItemLinkIcon>
                 Manage Account
-              </Sidebar.Item.Link>
-            </Sidebar.Item.Component>
+              </Sidebar.ListItemLink>
+            </Sidebar.ListItem>
 
-            <Sidebar.Item.Component active={true}>
-              <Sidebar.Item.Link href="..">
-                <Sidebar.Item.Icon><i className="fa fa-users" /></Sidebar.Item.Icon>
+            <Sidebar.ListItem active={true}>
+              <Sidebar.ListItemLink href="..">
+                <Sidebar.ListItemLinkIcon><i className="fa fa-users" /></Sidebar.ListItemLinkIcon>
                 Manage Users
-              </Sidebar.Item.Link>
-            </Sidebar.Item.Component>
+              </Sidebar.ListItemLink>
+            </Sidebar.ListItem>
 
-            <Sidebar.Item.Component active={false}>
-              <Sidebar.Item.Link href="..">
-                <Sidebar.Item.Icon><i className="fa fa-envelope-o" /></Sidebar.Item.Icon>
+            <Sidebar.ListItem active={false}>
+              <Sidebar.ListItemLink href="..">
+                <Sidebar.ListItemLinkIcon><i className="fa fa-envelope-o" /></Sidebar.ListItemLinkIcon>
                 Messages
-              </Sidebar.Item.Link>
-            </Sidebar.Item.Component>
+              </Sidebar.ListItemLink>
+            </Sidebar.ListItem>
 
-            <Sidebar.Item.Separator />
+            <Sidebar.ListSeparator />
           </Sidebar.List>
 
           <Sidebar.List>
-            <Sidebar.Item.Title> More </Sidebar.Item.Title>
-            <Sidebar.Item.Component active={false}>
-              <Sidebar.Item.Link href="..">
-                <Sidebar.Item.Icon><i className="fa fa-map-marker" /></Sidebar.Item.Icon>
+            <Sidebar.ListTitle> More </Sidebar.ListTitle>
+            <Sidebar.ListItem active={false}>
+              <Sidebar.ListItemLink href="..">
+                <Sidebar.ListItemLinkIcon><i className="fa fa-map-marker" /></Sidebar.ListItemLinkIcon>
                 Maps
-              </Sidebar.Item.Link>
-            </Sidebar.Item.Component>
+              </Sidebar.ListItemLink>
+            </Sidebar.ListItem>
 
-            <Sidebar.Item.Component active={false}>
-              <Sidebar.Item.Link href="..">
-                <Sidebar.Item.Icon><i className="fa fa-calendar-o" /></Sidebar.Item.Icon>
+            <Sidebar.ListItem active={false}>
+              <Sidebar.ListItemLink href="..">
+                <Sidebar.ListItemLinkIcon><i className="fa fa-calendar-o" /></Sidebar.ListItemLinkIcon>
                 Calendar
-              </Sidebar.Item.Link>
-            </Sidebar.Item.Component>
+              </Sidebar.ListItemLink>
+            </Sidebar.ListItem>
 
-            <Sidebar.Item.Component active={false}>
-              <Sidebar.Item.Link href="..">
-                <Sidebar.Item.Icon><i className="fa fa-th" /></Sidebar.Item.Icon>
+            <Sidebar.ListItem active={false}>
+              <Sidebar.ListItemLink href="..">
+                <Sidebar.ListItemLinkIcon><i className="fa fa-th" /></Sidebar.ListItemLinkIcon>
                 List
-              </Sidebar.Item.Link>
-            </Sidebar.Item.Component>
+              </Sidebar.ListItemLink>
+            </Sidebar.ListItem>
           </Sidebar.List>
         </Sidebar.Outer>
 
@@ -99,52 +99,53 @@ var App = React.createClass({
               <h6 className="title"> Buttons </h6>
 
               <div style={{ marginBottom: 10 }}>
-                <button className="btn -default -xs"> Extra Small </button>&nbsp;
-                <button className="btn -primary -xs"> Extra Small </button>&nbsp;
-                <button className="btn -warning -xs"> Extra Small </button>&nbsp;
-                <button className="btn -danger -xs"> Extra Small </button>&nbsp;
-                <button className="btn -success -xs"> Extra Small </button>&nbsp;
+                <button className="btn btn--default btn--xs"> Extra Small </button>&nbsp;
+                <button className="btn btn--primary btn--xs"> Extra Small </button>&nbsp;
+                <button className="btn btn--warning btn--xs"> Extra Small </button>&nbsp;
+                <button className="btn btn--danger btn--xs"> Extra Small </button>&nbsp;
+                <button className="btn btn--success btn--xs"> Extra Small </button>&nbsp;
               </div>
 
               <div style={{ marginBottom: 10 }}>
-                <button className="btn -default -sm"> Cancel </button>&nbsp;
-                <button className="btn -primary -sm"> Cancel </button>&nbsp;
-                <button className="btn -warning -sm"> Cancel </button>&nbsp;
-                <button className="btn -danger -sm"> Cancel </button>&nbsp;
-                <button className="btn -success -sm"> Cancel </button>&nbsp;
+                <button className="btn btn--default btn--sm"> Cancel </button>&nbsp;
+                <button className="btn btn--primary btn--sm"> Cancel </button>&nbsp;
+                <button className="btn btn--warning btn--sm"> Cancel </button>&nbsp;
+                <button className="btn btn--danger btn--sm"> Cancel </button>&nbsp;
+                <button className="btn btn--success btn--sm"> Cancel </button>&nbsp;
               </div>
 
               <div style={{ marginBottom: 10 }}>
-                <button className="btn -default"> Close </button>&nbsp;
-                <button className="btn -primary"> Submit </button>&nbsp;
-                <button className="btn -warning"> Cancel </button>&nbsp;
-                <button className="btn -success"> Save </button>&nbsp;
-                <button className="btn -danger"> Remove </button>&nbsp;
+                <button className="btn btn--default"> Close </button>&nbsp;
+                <button className="btn btn--primary"> Submit </button>&nbsp;
+                <button className="btn btn--warning"> Cancel </button>&nbsp;
+                <button className="btn btn--success"> Save </button>&nbsp;
+                <button className="btn btn--danger"> Remove </button>&nbsp;
               </div>
 
               <div style={{ marginBottom: 10 }}>
-                <button className="btn -default -inverse"> Close </button>&nbsp;
-                <button className="btn -primary -inverse"> Submit </button>&nbsp;
-                <button className="btn -warning -inverse"> Cancel </button>&nbsp;
-                <button className="btn -success -inverse"> Save </button>&nbsp;
-                <button className="btn -danger -inverse"> Remove </button>&nbsp;
+                <button className="btn btn--default btn--rounded"> Close </button>&nbsp;
+                <button className="btn btn--primary btn--rounded"> Submit </button>&nbsp;
+                <button className="btn btn--warning btn--rounded"> Cancel </button>&nbsp;
+                <button className="btn btn--success btn--rounded"> Save </button>&nbsp;
+                <button className="btn btn--danger btn--rounded"> Remove </button>&nbsp;
               </div>
 
               <div style={{ marginBottom: 10 }}>
-                <button className="btn -default -lg"> Hello </button>&nbsp;
-                <button className="btn -primary -lg"> Hello </button>&nbsp;
-                <button className="btn -warning -lg"> Hello </button>&nbsp;
-                <button className="btn -danger -lg"> Hello </button>&nbsp;
-                <button className="btn -success -lg"> Hello </button>&nbsp;
+                <button className="btn btn--default btn--lg"> Hello </button>&nbsp;
+                <button className="btn btn--primary btn--lg"> Hello </button>&nbsp;
+                <button className="btn btn--warning btn--lg"> Hello </button>&nbsp;
+                <button className="btn btn--danger btn--lg"> Hello </button>&nbsp;
+                <button className="btn btn--success btn--lg"> Hello </button>&nbsp;
               </div>
 
               <hr />
               <div style={{ width: '50%' }}>
                 <h6 className="title"> Alert </h6>
-                <div className="alert -primary">Alert, alas hello to world!</div>
-                <div className="alert -success">Alert, it was successful!</div>
-                <div className="alert -warning">Alert, it is invalid!</div>
-                <div className="alert -danger">Alert, an error occured!</div>
+                <div className="alert alert--primary">Alert, alas hello to world!</div>
+                <div className="alert alert--success">Alert, it was successful!</div>
+                <div className="alert alert--warning">Alert, it is invalid!</div>
+                <div className="alert alert--danger">Alert, an error occured!</div>
+                <div className="alert alert--primary alert--rounded">Alert, alas hello to world!</div>
               </div>
               <hr />
 
@@ -156,7 +157,6 @@ var App = React.createClass({
                 <label> Username </label>
                 <p className="form-control-static"> Oh, hey! </p>
               </div>
-              <div><Form.Checkbox /></div>
 
               <h6 className="title"> Tables </h6>
 
@@ -182,11 +182,11 @@ var App = React.createClass({
               <hr />
 
               <h6 className="title"> Labels </h6>
-              <div className="label -default"> Undefined </div>&nbsp;
-              <div className="label -primary"> Note </div>&nbsp;
-              <div className="label -warning"> Oops! </div>&nbsp;
-              <div className="label -danger"> Error </div>&nbsp;
-              <div className="label -success"> Success! </div>&nbsp;
+              <div className="label label--default"> Undefined </div>&nbsp;
+              <div className="label label--primary"> Note </div>&nbsp;
+              <div className="label label--warning"> Oops! </div>&nbsp;
+              <div className="label label--danger"> Error </div>&nbsp;
+              <div className="label label--success"> Success! </div>&nbsp;
 
               <h6 className="title"> Dropdown </h6>
               <h6 className="title"> Tooltip </h6>

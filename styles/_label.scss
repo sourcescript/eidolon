@@ -25,22 +25,22 @@
    * Color variants
    */
   &.label--default {
-    label-variant($color-grey);
+    @include label-variant($brand-grey);
   }
 
   &.label--primary {
-    label-variant($color-primary);
+    @include label-variant($brand-primary);
   }
 
   &.label--success {
-    label-variant($color-success);
+    @include label-variant($brand-success);
   }
 
   &.label--warning {
-    label-variant($color-warning);
+    @include label-variant($brand-warning);
   }
 
   &.label--danger {
-    label-variant($color-danger);
+    @include label-variant($brand-danger);
   }
 }

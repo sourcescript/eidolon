@@ -1,6 +1,6 @@
 .sidebar {
   max-height: 100vh;
-  width $sidebar-width;
+  width: $sidebar-width;
   font-family: $headings-font-family;
   overflow: scroll;
   position: fixed;
@@ -15,7 +15,7 @@
 
   & > ul > li {
     list-style: none;
-    color $sidebar-color;
+    color: $sidebar-color;
   }
 
   & > ul > li.sidebar__item-separator {
@@ -28,7 +28,7 @@
   & > ul > li.sidebar__item-title {
     @extend .u-text.u-text--up;
     padding: $padding-base-vt ($padding-base-hr / 2);
-    letter-spacing: $base-letter-spacing;
+    letter-spacing: $letter-spacing-base;
     font-size: 10;
   }
 
@@ -49,7 +49,7 @@
 
   // We apply this on a separatee line because
   // we only apply this to items with the `active` class
-  & > ul > li.sidebar__item.sidebar__item--active { border-left: 2px solid $color-primary; }
+  & > ul > li.sidebar__item.sidebar__item--active { border-left: 2px solid $brand-primary; }
 
   & > ul > li.sidebar__item > a {
     // We'll make this a relative for the chilren elements (`icons`)

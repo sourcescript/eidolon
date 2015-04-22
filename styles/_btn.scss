@@ -10,15 +10,15 @@
 
   &:hover,
   &.btn--active {
-    color: darken($color, 5%);
-    border-color: darken($color, 5%);
+    color: darken($color, $brand--dk);
+    border-color: darken($color, $brand--dk);
   }
 }
 
 // Multiply base padding against provided value
 @mixin btn-size($size: 1, $fsize: 14px) {
   font-size: $fsize;
-  padding: ($btn-padding-vt * $size) ($btn-padding-hr * size);
+  padding: ($btn-padding-vt * $size) ($btn-padding-hr * $size);
 }
 
 /**
@@ -31,7 +31,7 @@
   display: inline-block;
   width: auto;
   // We won't provide any argument since we want to use the mixin defaults
-  btn-size();
+  @include btn-size();
   font-family: $btn-font-family;
   text-align: center;
   text-transform: uppercase;
@@ -47,7 +47,7 @@
   border: 1px solid;
   border-color: transparent;
   border-radius: $border-radius-base;
-  transition $transition-base;
+  transition: $transition-base;
 
   /**
    * Color variants (and its inverses)
@@ -81,17 +81,13 @@
     width: 100%;
   }
 
-  &.btn--xs {
-    @include btn-size(.5, 10px);
-  }
+  &.btn--xs { @include btn-size(.5, 10px); }
 
-  &.btn--sm {
-    @include btn-size(.75, 12px);
-  }
+  &.btn--sm { @include btn-size(.75, 12px); }
 
-  &.btn--lg {
-    @include btn-size(2, 16px);
-  }
+  &.btn--lg { @include btn-size(2, 16px); }
+
+  &.btn--rounded { border-radius: $border-radius-base; }
 }
 
 /**
@@ -103,12 +99,12 @@
   // and floated to rid of spaces between each .btn
   // (which is a nature of `inline-block`)
   // More :: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
-  @extend .u-clearfix
+  @include u-clearfix();
 
   > .btn {
     // Rid of the spaces between each `sibling` by turning the
     // `display` to `block` and `float`ing the element
     display: block;
-    @extend .u-clearfix > .--left
+    @include u-clearfix__left();
   }
 }

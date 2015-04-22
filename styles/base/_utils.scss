@@ -25,7 +25,8 @@
  * Contain floats without resorting to representational markup,
  * http//nicolasgallagher.com/micro-clearfix-hack/
  */
-.u-clearfix
+ // Mixin
+@mixin u-clearfix() {
   &:before,
   &:after {
     content: "";
@@ -33,7 +34,13 @@
   }
 
   &:after { clear: both; }
+}
+@mixin u-clearfix__left { float: left; }
+@mixin u-clearfix__left { float: right; }
 
+// Utility class
+.u-clearfix {
+  @include u-clearfix();
   > .u-clearfix__left { float: left; }
   > .u-clearfix__left { float: right; }
 }
@@ -42,14 +49,22 @@
  * An element represented as a table. This is
  * used to vertically center content.
  */
-.u-table {
+
+// Mixins
+@mixin u-table() {
   display: table;
   height: 100%;
   width: 100%;
+}
 
-  > .u-table__inner {
-    display: table-cell;
-    vertical-align: center;
-    text-align: center;
-  }
+@mixin u-table__inner($vertical-align: middle, $text-align: center) {
+  display: table-cell;
+  vertical-align: center;
+  text-align: center;
+}
+
+// Utility class
+.u-table {
+  @include u-table();
+  > .u-table__inner { @include u-table__inner(); }
 }

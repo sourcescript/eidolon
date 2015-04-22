@@ -1,17 +1,9 @@
-/**
- * Directories
- */
-$bower_dir: '../bower_components';
-// Please first check <root>/scripts/template/styles.js
-// which is where the variables are stored and written.
 // * All styling should generally adhere to BEM
 
 /*
  * ================================
- * Dependencies / vendor
+ * Important dependencies / vendor
  * ================================
- *
- *
  */
 
 // normalize.css
@@ -19,31 +11,21 @@ $bower_dir: '../bower_components';
 // A modern, HTML5-ready alternative to CSS resets
 // which makes elements to be consistent across
 // all browsers.
-@import "#{bower}/normalize.css/normalize.css";
+@import "vendor/normalize";
 
 // normalize.css
 // https://necolas.github.io/normalize.css/
 // A modern, HTML5-ready alternative to CSS resets
 // which makes elements to be consistent across
 // all browsers.
-@import "#{bower}/font-awesome/css/font-awesome.css";
-
-// Montserrat
-// Originally from Google Fonts
-@import "vendor/montserrat/montserrat";
-// Open Sans
-// Originally from Google Fonts
-@import "vendor/open-sans/open-sans";
-
-// OSX-like scrollbar
-@import "vendor/scrollbar.css";
+@import "../bower_components/font-awesome/scss/font-awesome";
 
 /**
  * ================================
  * General styling
  * ================================
- *
  */
+@import "variables";
 @import "base/utils";
 @import "base/base";
 @import "base/grid";
@@ -64,3 +46,19 @@ $bower_dir: '../bower_components';
 @import "components/sidebar";
 @import "components/topbar";
 @import "components/content";
+
+/**
+ * ================================
+ * Vendor snippets
+ * ================================
+ */
+
+// Montserrat
+// Originally from Google Fonts
+@import "vendor/montserrat/montserrat";
+// Open Sans
+// Originally from Google Fonts
+@import "vendor/open-sans/open-sans";
+
+// OSX-like scrollbar
+@import "vendor/scrollbar";
