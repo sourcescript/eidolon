@@ -5,7 +5,7 @@ class Outer extends React.Component {
     var { children, ...other } = this.props;
 
     return (
-      <div className="topbar" {...other}>
+      <div className="l-topbar" {...other}>
         {children}
       </div>
     );

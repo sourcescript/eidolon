@@ -5,7 +5,7 @@ class Title extends React.Component {
     var { children, ...other } = this.props;
 
     return (
-      <div className="topbar__title" {...other}>
+      <div className="l-topbar__title" {...other}>
         {children}
       </div>
     );

@@ -18,6 +18,7 @@
   background-color: $brand-grey;
   border: 1px solid;
   border-color: transparent;
+  border-radius: $border-radius-base;
 
   /**
    * Color variants
@@ -26,6 +27,4 @@
   &.alert--success { @include alert-variant($brand-success); }
   &.alert--warning { @include alert-variant($brand-warning); }
   &.alert--danger { @include alert-variant($brand-danger); }
-  
-  &.alert--rounded { border-radius: $border-radius-base; }
 }

@@ -5,7 +5,7 @@ class Body extends React.Component {
     var { children, ...other } = this.props;
 
     return (
-      <div className="content__inner__body" {...other}>
+      <div className="l-content__inner__body" {...other}>
         {children}
       </div>
     )

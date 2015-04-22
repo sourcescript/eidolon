@@ -5,7 +5,7 @@ class ListItemLinkIcon extends React.Component {
     var { children, ...other } = this.props;
 
     return (
-      <span className="sidebar__item__pre-icon" {...other}>
+      <span className="l-sidebar__item__pre-icon" {...other}>
         {children}
       </span>
     );

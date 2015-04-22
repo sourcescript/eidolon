@@ -5,7 +5,7 @@ class Inner extends React.Component {
     var { children, ...other } = this.props;
 
     return (
-      <div className="content__inner" {...other}>
+      <div className="l-content__inner" {...other}>
         {children}
       </div>
     )

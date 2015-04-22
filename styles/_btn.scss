@@ -87,7 +87,7 @@
 
   &.btn--lg { @include btn-size(2, 16px); }
 
-  &.btn--rounded { border-radius: $border-radius-base; }
+  &.btn--rounded { border-radius: $border-radius-rounded; }
 }
 
 /**

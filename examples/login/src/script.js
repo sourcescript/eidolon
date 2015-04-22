@@ -145,6 +145,7 @@ var App = React.createClass({
                 <div className="alert alert--success">Alert, it was successful!</div>
                 <div className="alert alert--warning">Alert, it is invalid!</div>
                 <div className="alert alert--danger">Alert, an error occured!</div>
+                <div className="alert alert--primary alert--rounded">Alert, alas hello to world!</div>
               </div>
               <hr />
 

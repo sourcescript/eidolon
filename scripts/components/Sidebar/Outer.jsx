@@ -5,7 +5,7 @@ export default React.createClass({
     var { children, ...other } = this.props;
 
     return (
-      <div className="sidebar" {...other}>
+      <div className="l-sidebar" {...other}>
         {children}
       </div>
     )

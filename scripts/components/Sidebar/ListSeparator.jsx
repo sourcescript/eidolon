@@ -2,7 +2,7 @@ import React from 'react';
 
 class ListSeparator extends React.Component {
   render() {
-    return <li className="sidebar__item-separator" />;
+    return <li className="l-sidebar__item-separator" />;
   }
 }
 

@@ -1,18 +1,18 @@
-.topbar {
+.l-topbar {
   position: fixed;
   height: $topbar-height;
   background: $topbar-bg;
   width: 100%;
   color: #fff;
 
-  .topbar__title {
+  .l-topbar__title {
     float: left;
     padding: $padding-base-vt;
     height: $topbar-height;
     width: $sidebar-width;
   }
 
-  .topbar__inner {
+  .l-topbar__inner {
     float: left;
     padding: $padding-base-vt;
   }

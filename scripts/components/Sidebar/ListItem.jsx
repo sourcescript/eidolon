@@ -7,7 +7,7 @@ class ListItem extends React.Component {
 
   render() {
     var { children, ...other } = this.props;
-    return <li className="sidebar__item" {...other}> {children} </li>;
+    return <li className="l-sidebar__item" {...other}> {children} </li>;
   }
 };
 
