@@ -1,0 +1,110 @@
+/**
+ * Mixins
+ */
+
+// Creates varying of the btn
+@mixin btn-variant($color) {
+  color: $color;
+  border-color: $color;
+  background: transparent;
+
+  &:hover,
+  &.btn--active {
+    color: darken($color, $brand--dk);
+    border-color: darken($color, $brand--dk);
+  }
+}
+
+// Multiply base padding against provided value
+@mixin btn-size($size: 1, $fsize: 14px) {
+  font-size: $fsize;
+  padding: ($btn-padding-vt * $size) ($btn-padding-hr * $size);
+}
+
+/**
+ * Buttons
+ * @usage
+ * <button class="btn -primary -block -sm -inverse" />
+ */
+.btn {
+  // We'll use `inline-block` as its `display` so it doesn't act like an asshole
+  display: inline-block;
+  width: auto;
+  // We won't provide any argument since we want to use the mixin defaults
+  @include btn-size();
+  font-family: $btn-font-family;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-base;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  // Reset unusual Firefox-on-Android default style;
+  // see https//github.com/necolas/normalize.css/issues/214
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: $border-radius-base;
+  transition: $transition-base;
+
+  /**
+   * Color variants (and its inverses)
+   */
+  &.btn--default {
+    @include btn-variant($brand-grey);
+  }
+
+  &.btn--primary {
+    @include btn-variant($brand-primary);
+  }
+
+  &.btn--success {
+    @include btn-variant($brand-success);
+  }
+
+  &.btn--warning {
+    @include btn-variant($brand-warning);
+  }
+
+  &.btn--danger {
+    @include btn-variant($brand-danger);
+  }
+
+  /**
+   * Size variants
+   */
+
+  &.btn--block {
+    display: block;
+    width: 100%;
+  }
+
+  &.btn--xs { @include btn-size(.5, 10px); }
+
+  &.btn--sm { @include btn-size(.75, 12px); }
+
+  &.btn--lg { @include btn-size(2, 16px); }
+
+  &.btn--rounded { border-radius: $border-radius-rounded; }
+}
+
+/**
+ * Button group!
+ */
+.btn-group {
+  // Implement the clearfix hack since all child `btn` inside this element
+  // will be implemented as a `block` as opposed to the `inline-block` of .btns
+  // and floated to rid of spaces between each .btn
+  // (which is a nature of `inline-block`)
+  // More :: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+  @include u-clearfix();
+
+  > .btn {
+    // Rid of the spaces between each `sibling` by turning the
+    // `display` to `block` and `float`ing the element
+    display: block;
+    @include u-clearfix__left();
+  }
+}

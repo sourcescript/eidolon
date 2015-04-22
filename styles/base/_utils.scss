@@ -1,0 +1,70 @@
+ /**
+  * Some text utilities used to center, transform to up / low
+  */
+.u-text {
+  &.u-text--left { text-align: left; }
+  &.u-text--right { text-align: right; }
+  &.u-text--center { text-align: center; }
+
+  &.u-text--up { text-transform: uppercase; }
+  &.u-text--low { text-transform: lowercase; }
+  &.u-text--cap { text-transform: capitalize; }
+
+  /**
+   * Creates a one-liner text that ends
+   * overflowing text with an ellipsis
+   */
+  &.u-text--truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/**
+ * Contain floats without resorting to representational markup,
+ * http//nicolasgallagher.com/micro-clearfix-hack/
+ */
+ // Mixin
+@mixin u-clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+@mixin u-clearfix__left { float: left; }
+@mixin u-clearfix__left { float: right; }
+
+// Utility class
+.u-clearfix {
+  @include u-clearfix();
+  > .u-clearfix__left { float: left; }
+  > .u-clearfix__left { float: right; }
+}
+
+/**
+ * An element represented as a table. This is
+ * used to vertically center content.
+ */
+
+// Mixins
+@mixin u-table() {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin u-table__inner($vertical-align: middle, $text-align: center) {
+  display: table-cell;
+  vertical-align: center;
+  text-align: center;
+}
+
+// Utility class
+.u-table {
+  @include u-table();
+  > .u-table__inner { @include u-table__inner(); }
+}

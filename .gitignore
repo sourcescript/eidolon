@@ -30,6 +30,9 @@ build/Release
 node_modules
 bower_components
 
+**/*/.sass-cache
+.sass-cache
+
 # OS Bullshit
 .DS_Store
 .thumbs

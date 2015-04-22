@@ -1,0 +1,14 @@
+.l-content {
+  padding-top: $topbar-height;
+  margin-left: $sidebar-width;
+  background: $brand-grey--lt;
+  min-height: 100vh;
+
+  .l-content__inner { padding: $padding-base-vt $padding-base-hr; }
+
+  .l-content__inner__body {
+    padding: $padding-base-vt $padding-base-hr;
+    margin-bottom: $padding-base-vt;
+    background: #fff;
+  }
+}

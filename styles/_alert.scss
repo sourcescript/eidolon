@@ -1,0 +1,30 @@
+/**
+ * Mixins
+ */
+@mixin alert-variant($color) {
+  background: $color;
+  border-color: darken($color, $brand--lt);
+}
+
+/**
+ * Alerts
+ * @usage
+ * <div class="alert alert--success" />
+ */
+.alert {
+  width: 100%;
+  padding: $padding-base-vt $padding-base-hr;
+  vertical-align: middle;
+  background-color: $brand-grey;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: $border-radius-base;
+
+  /**
+   * Color variants
+   */
+  &.alert--primary { @include alert-variant($brand-primary); }
+  &.alert--success { @include alert-variant($brand-success); }
+  &.alert--warning { @include alert-variant($brand-warning); }
+  &.alert--danger { @include alert-variant($brand-danger); }
+}

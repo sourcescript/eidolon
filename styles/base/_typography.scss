@@ -1,0 +1,52 @@
+// Base
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  letter-spacing: -1px;
+  line-height: $headings-line-height;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+
+  small, .small {
+    letter-spacing: initial; // Remove the letter-spacing from the heading
+    padding-top: $font-size-small;
+    font-size: 70%;
+  }
+}
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size:  $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+p { margin: 0 0 ($line-height-computed / 2); }
+
+small {
+  font-family: $font-family-base;
+  display: block;
+  color: $headings-small-color;
+}
+
+.title {
+  letter-spacing: initial;
+  color: $brand-base-sub;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($link-color, $brand--dk);
+    text-decoration: $link-decoration;
+  }
+}

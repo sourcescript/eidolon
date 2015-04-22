@@ -7,10 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest",
-    "build": "webpack -d --display-error-details",
-    "watch": "webpack -w -d --display-error-details",
-    "prod": "webpack -p -d --display-error-details"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -26,7 +23,16 @@
     "babel": "^5.0.8",
     "babel-core": "^5.0.8",
     "babel-loader": "^5.0.0",
-    "stylus": "^0.50.0",
-    "webpack": "^1.7.3"
+    "chai": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon": "^1.0.4",
+    "karma-webpack": "^1.5.0",
+    "mocha": "^2.2.4",
+    "phantomjs-polyfill": "0.0.1",
+    "sinon": "^1.14.1",
+    "webpack": "^1.8.7"
   }
 }

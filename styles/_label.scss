@@ -1,0 +1,46 @@
+/**
+ * Mixins
+ */
+@mixin label-variant($color) {
+  background: $color;
+}
+
+/**
+ * Label
+ * @usage
+ * <div class="label -success" />
+ */
+.label {
+  display: inline-block;
+  padding: 2px 5px;
+  color: #fff;
+  font-size: 10px;
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-base;
+  background-color: transparent;
+  border-radius: $border-radius-base;
+
+  /**
+   * Color variants
+   */
+  &.label--default {
+    @include label-variant($brand-grey);
+  }
+
+  &.label--primary {
+    @include label-variant($brand-primary);
+  }
+
+  &.label--success {
+    @include label-variant($brand-success);
+  }
+
+  &.label--warning {
+    @include label-variant($brand-warning);
+  }
+
+  &.label--danger {
+    @include label-variant($brand-danger);
+  }
+}
