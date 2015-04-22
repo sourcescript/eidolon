@@ -33,7 +33,7 @@
   }
 
   & > ul > li.sidebar__item {
-    @extend .u-text.u-text--truncate;
+    /* @include .u-text.u-text--truncate; */
     height: $height-base;
     list-style: none;
     background: transparent;
@@ -56,7 +56,7 @@
     // that will be given a position of `absolute` for flexibility purposes
     position: relative;
     display: block;
-    padding: $padding-base-vt $padding-base-hr ($padding-base-vt * 2) $padding-base-hr;
+    padding: $padding-base-vt $padding-base-hr $padding-base-vt ($padding-base-hr * 3);
     height: $height-base;
     width: 100%;
     color: #f2f2f2;
