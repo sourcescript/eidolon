@@ -8,7 +8,7 @@ class Body extends React.Component {
       <div className="l-content__inner__body" {...other}>
         {children}
       </div>
-    )
+    );
   }
 }
 

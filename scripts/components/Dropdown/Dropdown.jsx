@@ -1,7 +1,11 @@
 import React from 'react';
+import DomUtils from '../../utils/DomUtils';
+import EventListener from '../../utils/EventListener';
 
 const ESC_KEY = 13;
 const TRIGGER_REF = 'trigger';
+// Flag if a node inside the root element should close.
+export const CLOSE_EXCEPTION_CLASS = 'js-dropdown-ex-flag';
 
 class Dropdown extends React.Component {
   static propTypes = {
@@ -29,56 +33,55 @@ class Dropdown extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('click', this._handleClick.bind(this));
-    window.addEventListener('keyup', this._handleKeyUp.bind(this));
+    this.$clickListener = EventListener.listen(document, 'click', this._handleClick.bind(this));
+    this.$keyUpListener = EventListener.listen(document, 'keyup', this._handleKeyUp.bind(this));
   }
 
   componentWillUnmount() {
-    window.removeEventListener('click', this._handleClick);
-    window.removeEventListener('keyup', this._handleKeyUp);
+    this.$clickListener.remove();
+    this.$keyUpListener.remove();
   }
 
   render() {
-    var { active } = this.state;
-    var { trigger, children } = this.props;
+    let { active } = this.state;
+    let { trigger, children } = this.props;
 
     return (
       <span>
         {trigger(TRIGGER_REF)}
-        { active ? children : null }
+        {active ? children : null}
       </span>
     );
   }
 
   _handleClick(evt) {
-    var { active } = this.state;
+    let { active } = this.state;
+    let { disabled } = this.props;
+    let target = evt.target;
+    let root = React.findDOMNode(this);
     // "Hey, dropdown, fuck it, it's disabled, okay?"
     // "It's not me, it's them, dropdown!"
-    if ( this.props.disabled ) {
+    // let hasClass = DomUtils.hasClass(target, CLOSE_EXCEPTION_CLASS);
+    if ( disabled ) {
       return false;
     }
 
-    var triggerNode = React.findDOMNode(this.refs[TRIGGER_REF]);
-
+    let triggerNode = React.findDOMNode(this.refs[TRIGGER_REF]);
     // We'll create this condition here, so we don't use
-    // `preventDefault` and `stopPropagation` on elements
-    // we don't own.
-    if ( evt.target !== triggerNode ) {
-      if ( active ) {
-        this.setState({ active: false });
-      }
-
-      return;
+    // `preventDefault` and `stopPropagation` on child nodes
+    // or elements not inside the root node.
+    if ( target === triggerNode ) {
+      evt.preventDefault();
+      evt.stopPropagation && evt.stopPropagation();
     }
-    evt.preventDefault();
-    evt.stopPropagation && evt.stopPropagation();
-    this.setState({ active: !active });
+
+    this.setState({ active: DomUtils.isNodeInRoot(target, root) ? !active : false });
   }
 
   _handleKeyUp(evt) {
     // Close the dropdown menu when the `escape` key is pressed
     // while the state is active (menu is shown).
-    if ( this.state.active && evt.keyCode == ESC_KEY ) {
+    if ( this.state.active && evt.keyCode === ESC_KEY ) {
       this.setState({ active: false });
     }
   }
