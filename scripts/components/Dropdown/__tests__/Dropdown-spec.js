@@ -11,34 +11,17 @@ const ESC_KEY = 13;
 describe('Dropdown component', () => {
   // https://github.com/airportyh/simulate.js/blob/master/simulate.js
   let sandbox;
-  let listenSpy;
-  let hasClassStub;
-
   let evt;
-  let _mouse;
-  let _keyup;
   let Instance;
   beforeEach(() => {
     sandbox = sinon.sandbox.create();
-    // listenSpy = sandbox.spy();
-    // sandbox.stub(EventListener, 'listen').returns({ remove: listenSpy });
-    // hasClassStub = sandbox.stub(DomUtils, 'hasClass');
-
-    _mouse = document.createEvent('HTMLEvents');
-    _mouse.initEvent('click', true, true);
-
-    _keyup = document.createEvent('Events');
-    _keyup.initEvent('keyup', true, true);
-
+    // Spy on EventListener before the component is rendered
+    // Return some value only for verification purposes
+    sandbox.stub(EventListener, 'listen').returns({});
     evt = { preventDefault: sandbox.spy(), stopPropagation: sandbox.spy() };
-
     Instance = TestUtils.renderIntoDocument(
-      <Dropdown trigger={(ref) => { return <button type="button" ref={ref}>Hi</button>; }} />
+      <Dropdown trigger={ref => <button type="button" ref={ref}>Hi</button> } />
     );
-  });
-
-  afterEach(() => {
-    sandbox.restore();
   });
 
   it('should be closed by default', () => {
@@ -46,6 +29,11 @@ describe('Dropdown component', () => {
   });
 
   describe('#handleClick @when trigger is clicked', () => {
+    it('should be triggered by the `click` event', () => {
+      expect(EventListener.listen.called).to.equal(true);
+      expect(Instance.$clickListener).not.to.equal(undefined);
+    });
+
     it('should open', () => {
       expect(Instance.state.active).to.equal(false);
 
@@ -75,6 +63,11 @@ describe('Dropdown component', () => {
   // //// ------------------------------
 
   describe('#_handleKeyUp @when ESC key is pressed', () => {
+    it('should be triggered by the `click` event', () => {
+      expect(EventListener.listen.called).to.equal(true);
+      expect(Instance.$keyUpListener).not.to.equal(undefined);
+    });
+
     it('should hide stuff while the menu is open', () => {
       Instance.state.active = true;
 
@@ -95,5 +88,9 @@ describe('Dropdown component', () => {
       Instance._handleKeyUp({ keyCode: 69 });
       expect(Instance.state.active).not.to.equal(false);
     });
+  });
+
+  afterEach(() => {
+    sandbox.restore();
   });
 });
