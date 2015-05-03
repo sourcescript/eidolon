@@ -9,15 +9,20 @@ $brand-warning: #FFD500;
 $brand-danger : #F24A53;
 $brand-blocked: #3d464d;
 $brand-grey: #999;
-$brand-grey--lt: #f2f2f2;
 
 $brand-base: #000;
 $brand-base-sub: $brand-blocked;
 // Percentage for use when darkening / lightening colors
 // e.g., darken(brand-base, brand--dk)
 // e.g., darken(brand-primary, brand--dk)
-$brand--lt: 15%;
-$brand--dk: 15%;
+$brand__lt: 15%;
+$brand__dk: 15%;
+$brand-primary--lt: lighten($brand-primary, $brand__lt);
+$brand-success--lt: lighten($brand-success, $brand__lt);
+$brand-warning--lt: lighten($brand-warning, $brand__lt);
+$brand-danger--lt : lighten($brand-danger, $brand__lt);
+$brand-blocked--lt: lighten($brand-blocked, $brand__lt);
+$brand-grey--lt: #f2f2f2;
 
 // $body-bg
 $text-color: #000;
