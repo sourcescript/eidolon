@@ -4,24 +4,27 @@ import TestUtils from 'react/lib/ReactTestUtils';
 import Dropdown from '../Dropdown';
 import DomUtils from '../../../utils/DomUtils';
 import EventListener from '../../../utils/EventListener';
-import Simulate from '../../../../test/Simulate';
 
 const ESC_KEY = 13;
 
 describe('Dropdown component', () => {
   // https://github.com/airportyh/simulate.js/blob/master/simulate.js
   let sandbox;
+  let removeSpy;
   let evt;
+  let trigger;
   let Instance;
   beforeEach(() => {
     sandbox = sinon.sandbox.create();
+    removeSpy = sandbox.spy();
     // Spy on EventListener before the component is rendered
     // Return some value only for verification purposes
-    sandbox.stub(EventListener, 'listen').returns({});
+    sandbox.stub(EventListener, 'listen').returns({ remove: removeSpy });
     evt = { preventDefault: sandbox.spy(), stopPropagation: sandbox.spy() };
     Instance = TestUtils.renderIntoDocument(
       <Dropdown trigger={ref => <button type="button" ref={ref}>Hi</button> } />
     );
+    trigger = React.findDOMNode(Instance.refs.trigger);
   });
 
   it('should be closed by default', () => {
@@ -37,7 +40,7 @@ describe('Dropdown component', () => {
     it('should open', () => {
       expect(Instance.state.active).to.equal(false);
 
-      evt.target = React.findDOMNode(Instance.refs.trigger);
+      evt.target = trigger;
       Instance._handleClick(evt);
       expect(Instance.state.active).to.equal(true);
     });
@@ -68,6 +71,13 @@ describe('Dropdown component', () => {
       expect(Instance.$keyUpListener).not.to.equal(undefined);
     });
 
+    it('should prevent default actions if the trigger was clicked', () => {
+      evt.target = trigger;
+      Instance._handleClick(evt);
+      expect(evt.preventDefault.called).to.equal(true);
+      expect(evt.stopPropagation.called).to.equal(true);
+    });
+
     it('should hide stuff while the menu is open', () => {
       Instance.state.active = true;
 
@@ -90,7 +100,5 @@ describe('Dropdown component', () => {
     });
   });
 
-  afterEach(() => {
-    sandbox.restore();
-  });
+  afterEach(() => { sandbox.restore(); });
 });
