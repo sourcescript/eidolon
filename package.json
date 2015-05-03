@@ -1,13 +1,16 @@
 {
   "name": "suleras",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The coolest dashboard written in ReactJS",
-  "main": "scripts/index.js",
+  "main": "dist/suleras.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "test": "karma start --single-run",
+    "script": "babel --stage=0 --out-file dist/suleras.js scripts/",
+    "style": "sass styles/main.scss dist/suleras.css",
+    "build": "npm run script && npm run style",
     "lint": "eslint scripts"
   },
   "repository": {

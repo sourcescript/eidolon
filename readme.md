@@ -1,6 +1,9 @@
 # suleras
 
-The coolest dashboard ever, written in ReactJS.
+[![npm version](http://img.shields.io/npm/v/suleras.svg?style=flat-square)](https://npmjs.org/package/suleras?style=flat-square) [![Dependencies Status](https://img.shields.io/david/sourcescript/suleras.svg?style=flat-square)](https://img.shields.io/david/sourcescript/suleras.svg?style=flat-square)
+[![devDependency Status](https://img.shields.io/david/dev/sourcescript/suleras.svg?style=flat-square)](https://img.shields.io/david/dev/sourcescript/suleras.svg?style=flat-square) [![Build Status](https://img.shields.io/travis/sourcescript/suleras.svg?style=flat-square)](https://travis-ci.org/sourcescript/suleras?branch=master)
+
+> The coolest dashboard ever, written in ReactJS.
 
 \* Documentation is currently a work-in-progress.
 
