@@ -2,7 +2,7 @@ import React from 'react';
 import DomUtils from '../../utils/DomUtils';
 import EventListener from '../../utils/EventListener';
 
-const ESC_KEY = 13;
+const ESC_KEY = 27;
 const TRIGGER_REF = 'trigger';
 // Flag if a node inside the root element should close.
 export const CLOSE_EXCEPTION_CLASS = 'js-dropdown-ex-flag';

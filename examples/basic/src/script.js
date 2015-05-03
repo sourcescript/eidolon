@@ -2,7 +2,7 @@
 require("babel/polyfill");
 
 import React from 'react';
-import { Sidebar, Topbar, Content, Form } from '../../../';
+import { Dropdown, Sidebar, Topbar, Content, Form } from '../../../';
 
 var App = React.createClass({
   render() {
@@ -188,6 +188,14 @@ var App = React.createClass({
               <div className="label label--success"> Success! </div>&nbsp;
 
               <h6 className="title"> Dropdown </h6>
+              <div className="dropdown">
+                <Dropdown trigger={ref => <button className="btn btn--default"> Close </button> }>
+                 <ul className="dropdown__menu">
+                  <li><a href="#"> Hi po </a></li>
+                  <li><a href="#" className="dropdown__menu__link--active"> Hi po </a></li>
+                 </ul>
+                </Dropdown>
+              </div>
               <h6 className="title"> Tooltip </h6>
             </Content.Body>
           </Content.Inner>

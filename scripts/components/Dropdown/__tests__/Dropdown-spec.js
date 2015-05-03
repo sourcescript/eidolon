@@ -5,7 +5,7 @@ import Dropdown from '../Dropdown';
 import DomUtils from '../../../utils/DomUtils';
 import EventListener from '../../../utils/EventListener';
 
-const ESC_KEY = 13;
+const ESC_KEY = 27;
 
 describe('Dropdown component', () => {
   // https://github.com/airportyh/simulate.js/blob/master/simulate.js
