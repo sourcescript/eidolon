@@ -16,6 +16,7 @@
     ".editorconfig",
     ".travis.yml",
     "**/*/__tests__",
+    "CONTRIBUTING.md",
     "karma.conf.js",
     "webpack.test.js"
   ],
