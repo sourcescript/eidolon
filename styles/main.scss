@@ -33,20 +33,32 @@
 @import "base/form";
 @import "base/table";
 @import "base/typography";
-@import "alert";
-@import "btn";
-@import "label";
-@import "dropdown";
+
+/**
+ * ================================
+ * Layout styles
+ * ================================
+ */
+@import "layout/sidebar";
+@import "layout/topbar";
+@import "layout/content";
 
 /**
  * ================================
  * Component styles
  * ================================
- *
  */
-@import "layout/sidebar";
-@import "layout/topbar";
-@import "layout/content";
+@import "components/alert";
+@import "components/btn";
+@import "components/label";
+@import "components/dropdown";
+
+/**
+ * ================================
+ * Module styles
+ * ================================
+ */
+@import "modules/login";
 
 /**
  * ================================

@@ -1,0 +1,26 @@
+.login {
+  display: table;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  color: #fff !important;
+
+  > .login__inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .login__container {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login__body {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: $border-radius-base;
+  }
+}
