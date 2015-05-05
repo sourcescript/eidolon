@@ -1,5 +1,4 @@
 // * All styling should generally adhere to BEM
-
 /*
  * ================================
  * Important dependencies / vendor
@@ -34,6 +33,7 @@
 @import "base/table";
 @import "base/typography";
 
+
 /**
  * ================================
  * Layout styles
@@ -52,6 +52,7 @@
 @import "components/btn";
 @import "components/label";
 @import "components/dropdown";
+@import "components/tooltip";
 
 /**
  * ================================

@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "karma start --single-run",
+    "test": "./node_modules/.bin/karma start --single-run",
     "script": "babel --stage=0 --out-file dist/suleras.js scripts/",
     "style": "sass styles/main.scss dist/suleras.css",
     "build": "npm run script && npm run style",
@@ -20,6 +20,7 @@
   "author": "Kier Borromeo <seraphipod@gmail.com> (https://srph.github.io)",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^2.0.0",
     "radium": "^0.10.1",
     "react": "^0.13.1"
   },
@@ -32,6 +33,7 @@
     "eslint": "^0.20.0",
     "karma": "^0.12.31",
     "karma-chai": "^0.1.0",
+    "karma-cli": "0.0.4",
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-sinon": "^1.0.4",
