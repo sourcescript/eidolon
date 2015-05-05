@@ -5,8 +5,9 @@
   "main": "src/script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -t [babelify --stage=0] --extension=.jsx . > bundle.js",
-    "style": "sass src/style.scss bundle.css"
+    "fonts": "cp ../../dist/fonts/* static/fonts/",
+    "build": "browserify -t [babelify --stage=0] --extension=.jsx . > static/js/bundle.js",
+    "style": "sass src/style.scss static/css/bundle.css"
   },
   "author": "srph <seraphipod@gmail.com> (https://srph.github.io)",
   "license": "ISC",

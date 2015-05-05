@@ -8,9 +8,10 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run",
-    "script": "babel --stage=0 --out-file dist/suleras.js scripts/",
-    "style": "sass styles/main.scss dist/suleras.css",
-    "build": "npm run script && npm run style",
+    "script": "babel --stage=0 --out-file dist/js/suleras.js scripts/ --source-maps",
+    "style": "sass styles/main.scss dist/css/suleras.css",
+    "fonts": "cp styles/vendor/*/*.woff2 dist/fonts/ && cp bower_components/font-awesome/fonts/* dist/fonts/",
+    "build": "npm run script && npm run style && npm run fonts && npm run fonts",
     "lint": "eslint scripts"
   },
   "repository": {

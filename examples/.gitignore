@@ -1,4 +1,6 @@
-*/bundle.*
+*/static/js
+*/static/css
+*/static/fonts/*.{eot,svg,otf,ttf,woff,woff2}
 */bower_components
 */node_modules
 */.sass-cache
