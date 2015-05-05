@@ -20,6 +20,7 @@
   "author": "Kier Borromeo <seraphipod@gmail.com> (https://srph.github.io)",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^2.0.0",
     "radium": "^0.10.1",
     "react": "^0.13.1"
   },

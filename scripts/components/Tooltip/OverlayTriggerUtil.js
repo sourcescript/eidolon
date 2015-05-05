@@ -21,20 +21,20 @@ export default {
   calculatePosition(trigger, overlay, placement) {
     // offsetTop, offsetLeft
     switch (placement) {
-      case 'top':
-        return {
-          top: trigger.offsetTop - trigger.offsetHeight,
-          left: trigger.offsetLeft + (trigger.offsetWidth / 2) - (overlay.offsetWidth / 2)
-        };
       case 'left':
         return {
           top: trigger.offsetTop + (trigger.offsetHeight / 2) - (overlay.offsetHeight / 2),
-          left: trigger.offsetLeft - trigger.offsetWidth
+          left: trigger.offsetLeft - overlay.offsetWidth
         };
       case 'right':
         return {
           top: trigger.offsetTop + (trigger.offsetHeight / 2) - (overlay.offsetHeight / 2),
           left: trigger.offsetLeft + trigger.offsetWidth
+        };
+      case 'top':
+        return {
+          top: trigger.offsetTop - overlay.offsetHeight,
+          left: trigger.offsetLeft + (trigger.offsetWidth / 2) - (overlay.offsetWidth / 2)
         };
       case 'bottom':
         return {

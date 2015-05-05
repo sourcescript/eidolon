@@ -6,6 +6,7 @@ import OverlayTrigger, {
   $OVERLAY_CONTAINER_INSTANCE_PROP
 } from '../OverlayTrigger';
 import OverlayTriggerUtil from '../OverlayTriggerUtil';
+import Tooltip from '../Tooltip';
 
 describe('OverlayTrigger', () => {
   let sandbox;
@@ -15,9 +16,9 @@ describe('OverlayTrigger', () => {
     sandbox = sinon.sandbox.create();
     // So we don't have to worry about it.
     sandbox.stub(OverlayTriggerUtil, 'calculatePosition').returns({ top: 0, left:0 });
-    Render = (placement = 'left', children = <section />) => {
+    Render = (position = 'left', children = <section />, overlay = <section />) => {
       return TestUtils.renderIntoDocument(
-        <OverlayTrigger placement={placement} overlay={() => { return children; }}>
+        <OverlayTrigger position={position} overlay={() => { return overlay; }}>
           {children}
         </OverlayTrigger>
       );
@@ -85,7 +86,8 @@ describe('OverlayTrigger', () => {
     it('should hide the overlay', () => {
       // Since we've tested this, we'll just call it here so we can justify.
       Instance._handleMouseEnter();
-      Instance._handleMouseOut();
+      // Instance._handleMouseOut();
+      TestUtils.Simulate.mouseOut(React.findDOMNode(Instance));
       expect(Instance.state.show).to.equal(false);
       expect(() => {
         let $overlay = Instance[$OVERLAY_CONTAINER_INSTANCE_PROP];

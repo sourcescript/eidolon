@@ -2,7 +2,15 @@
 require("babel/polyfill");
 
 import React from 'react';
-import { Dropdown, Sidebar, Topbar, Content, Form } from '../../../';
+import {
+  OverlayTrigger,
+  Tooltip,
+  Dropdown,
+  Sidebar,
+  Topbar,
+  Content,
+  Form
+} from '../../../scripts/index';
 
 var App = React.createClass({
   render() {
@@ -197,6 +205,18 @@ var App = React.createClass({
                 </Dropdown>
               </div>
               <h6 className="title"> Tooltip </h6>
+              <OverlayTrigger overlay={() => { return <Tooltip> Hover Me! </Tooltip> }}>
+                <button className="btn btn--default"> Hover Me! </button>
+              </OverlayTrigger>
+              <OverlayTrigger overlay={() => { return <Tooltip> Hover Me! </Tooltip> }} position={'top'}>
+                <button className="btn btn--default"> Hover Me! </button>
+              </OverlayTrigger>
+                <OverlayTrigger overlay={() => { return <Tooltip> Hover Me! </Tooltip> }} position={'right'}>
+                <button className="btn btn--default"> Hover Me! </button>
+              </OverlayTrigger>
+                <OverlayTrigger overlay={() => { return <Tooltip> Hover Me! </Tooltip> }} position={'bottom'}>
+                <button className="btn btn--default"> Hover Me! </button>
+              </OverlayTrigger>
             </Content.Body>
           </Content.Inner>
         </Content.Outer>

@@ -26,7 +26,10 @@ class OverlayTrigger extends React.Component {
     /**
      * The overlay component
      */
-    overlay: React.PropTypes.func.isRequired,
+    overlay: React.PropTypes.oneOfType([
+      React.PropTypes.func,
+      React.PropTypes.Element
+    ]).isRequired,
 
     /**
      * Position to display the overlay
@@ -82,11 +85,13 @@ class OverlayTrigger extends React.Component {
    * Displays the overlay
    */
   _handleMouseEnter() {
-    let { position } = this.props;
-    let trigger = React.findDOMNode(this);
-    let overlay = React.findDOMNode(this[$OVERLAY_CONTAINER_INSTANCE_PROP]);
-    let offset = OverlayTriggerUtil.calculatePosition(trigger, overlay, position);
-    this.setState({ show: true, top: offset.top, left: offset.left });
+    this.setState({ show: true }, () => {
+      let { position } = this.props;
+      let trigger = React.findDOMNode(this);
+      let overlay = React.findDOMNode(this[$OVERLAY_CONTAINER_INSTANCE_PROP]);
+      let offset = OverlayTriggerUtil.calculatePosition(trigger, overlay, position);
+      this.setState({ top: offset.top, left: offset.left });
+    });
   }
 
   /**
@@ -102,8 +107,12 @@ class OverlayTrigger extends React.Component {
   _mountOverlay() {
     // Mount the overlay itself
     let offset = { top: this.state.top, left: this.state.left };
+    let overlay = typeof this.props.overlay == 'function'
+      ? this.props.overlay()
+      : this.props.overlay;
+
     this[$OVERLAY_CONTAINER_INSTANCE_PROP] = React.render(
-      this.state.show ? cloneWithProps(this.props.overlay(), offset) : <span />,
+      this.state.show ? cloneWithProps(overlay, offset) : <span />,
       this[$OVERLAY_CONTAINER_PROP]
     );
   }
