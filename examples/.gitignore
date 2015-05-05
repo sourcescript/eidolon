@@ -1,6 +1,6 @@
 */static/js
 */static/css
-*/static/fonts/*.{eot,svg,otf,ttf,woff,woff2}
+*/static/fonts/*.*
 */bower_components
 */node_modules
 */.sass-cache
