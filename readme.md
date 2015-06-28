@@ -5,6 +5,8 @@
 
 > The coolest dashboard ever, written in ReactJS.
 
+**This project has been dropped. Feel free to fork it or use it as reference.**
+
 \* Documentation is currently a work-in-progress.
 
 - [Getting Started](docs/getting-started.md)
@@ -17,4 +19,4 @@
 ## Acknowledgement
 - [Jc Ricaro](https://github.com/jcricaro)
 
-**suleras** © 2015+, Sourcescript.
+**suleras** © 2015+, Kier Borromeo.
